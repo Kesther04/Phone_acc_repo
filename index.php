@@ -9,6 +9,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/header_move.js"></script>
     <script src="js/slideshow.js"></script>
+    <script src="js/ajax.js"></script>
     <title>OBIMI</title>
 </head>
 <body>
@@ -60,20 +61,78 @@
 </section>
 <section class="snd-sec-div">
   
-
   <div class="snd-snd">
+  <?php 
+  
+    require("dashboard/class/sel_class.php"); 
+  
+    $sel_ob = new SEL();
+
+    $sel_con = $sel_ob->sel_nsel();
+  
+    if ($sel_con) {
+    
+    while ($row = $sel_con->fetch_assoc()) {
+  ?>
     <div class="inner-snd-snd">
       <div class="inner-snd-snd-img">
+
+        <?php  
+        if ($row['dis_perc'] > 0) { ?>
+        
+        
         <span>
-          <p>20%</p>
+          <p><?php echo $row['dis_perc']; ?>%</p>
           <img src="img/orgcircle">
         </span>
-        <img src="img/redhrt.png" class="hrt">
-        <img src="img/mtn.png" class="main-img">
+
+
+       <?php }else { echo ""; } ?>
+       <div id="dis-like"><?php echo $row['likes']; ?></div>
+       <form class='adl' action='like/addlike.php' method='post'> 
+            <input type='hidden'  name='pt' value='<?php echo $row['item_name']; ?>' required>
+            <input type='hidden' name='pid' value='<?php echo $row['id']; ?>' required>
+            <button id='like-btn'><img src="img/blhrt.png" class="hrt"></button>
+        </form>
+
+        <form class='ddl' action='like/dellike.php' method='post'> 
+          <input type='hidden'  name='pt' value='<?php echo $row['item_name']; ?>' required>
+          <input type='hidden' name='pid' value='<?php echo $row['id']; ?>' required>
+          <button id='liked-btn' ><img src="img/redhrt.png" class="hrt"></button>
+        </form> 
+
+
+        
+        <img src="Accesories/img/<?php echo $row['item_img']; ?>" class="main-img">
       </div>
       <div class="inner-snd-snd-dis">
-        <h3>MTN Brandband Router 4G with free 30GB Data</h3>
-        <p><span>N10,000.00</span> N8,000.00</p>
+        <h3>
+          <?php 
+            $row['item_name']; 
+            $iname = str_replace('-',' ',$row['item_name']);
+            echo $iname;
+          ?>
+        </h3>
+        <?php  
+        if ($row['dis_perc'] > 0) { ?>
+        
+        
+        <p>
+          <span><?php echo $row['item_price'];?></span>
+          <?php
+          $prcal = str_replace('N','',$row['item_price']);
+          $pren = $row['dis_perc'];
+          $sol = $prcal -(($pren/100)*$prcal);
+
+          echo 'N'.$sol;
+          ?>
+        </p>
+
+
+       <?php }else { ?>
+        <p><?php echo $row['item_price'];?></p>
+       <?php } ?>
+        
         <div class="cart-div">
           <a href="#">Add to Cart</a>
         </div>
@@ -81,192 +140,7 @@
 
       
     </div>
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/hwband.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Huawei Band 7</h3>
-        <p> N44,700.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/erpods.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Pole StylePod Earpods</h3>
-        <p><span></span>N25,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/boombox.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>JBL Boom Box 3 Speaker</h3>
-        <p><span></span> N470,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/ppd.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Poolee PD 40 Pro 40000 22.5W</h3>
-        <p><span></span> N25,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/pci.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Poolee C-12 iPhone Aluminium Cable</h3>
-        <p><span></span> N2,500.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/ppp.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Poolee 16GB Micro SDHC Card with Adapter</h3>
-        <p><span></span> N2,500.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/whd.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Beats Solo Pro Wireless Headphones</h3>
-        <p><span></span> N190,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/3a.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>JBL Partybox 310 - Portable Party Speaker with Long Lasting Battery</h3>
-        <p><span></span> N590,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/3b.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Apple Watch Series 3 44mm</h3>
-        <p><span></span> N135,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/pooleePD.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Seagate External Hard Drive 1TB</h3>
-        <p><span></span> N30,000.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
-    
-    <div class="inner-snd-snd">
-      <div class="inner-snd-snd-img">
-        <img src="img/blhrt.png" class="hrt">
-        <img src="img/3c.png" class="main-img">
-      </div>
-      <div class="inner-snd-snd-dis">
-        <h3>Poolee Fast Charger TX-25</h3>
-        <p><span></span> N4,950.00</p>
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
-      </div>
-
-      
-    </div>
-
+  <?php } } ?>
 
   </div>
 

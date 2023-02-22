@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="../../../css/item_upload.css" media="all">
     <link rel="stylesheet" href="../../../css/dash_css_rep.css" media="all">
     <script src="../../../js/jquery.js"></script>
-    <!-- <script src="../js/ajax.js"></script> -->
-    <title>UPLOAD ITEM</title>
+    <script src="../../../js/ajax.js"></script>
+    <script src="../../../js/metro.js"></script>
+    <title>DASHBOARD</title>
     
 </head>
 <body>
@@ -30,12 +31,53 @@
 
 <div class="sec-div-container">
 
-<h1>UPLOAD ITEMS</h1>
+<h1>UPLOAD ITEM</h1>
 
     
 <div class="fir-div-container">
 <table>
 
+<tr>
+    <td><span>Product Name</span><input type="text" name="iname" placeholder="Product Name" required></td>
+
+    <td><span>Product Image</span><input type="file" name="img"  required></td>
+</tr>
+
+<tr>
+    <td><span>Cost Price</span><input type="number" name="icost" placeholder="add product cost price" required></td>
+
+    <td><span>Product Price</span><input type="number" name="iprice" placeholder="add product price" required></td>
+</tr>
+
+
+
+<tr>
+    <td><span>Product Discount Percentage</span><input type="number" name="idprc" placeholder="add a discount price" required></td>
+
+    <td>
+        <span>Product Group</span>
+        <select name="igroup" required>
+            <option></option>
+            <option>bluetooth_speakers</option>
+            <option>earpods</option>
+            <option>handsfree</option>
+            <option>headphones</option>
+            <option>memory_cards</option>
+            <option>phone_cases</option>
+            <option>phone_chargers</option>
+            <option>power_banks</option>
+            <option>screen_guards</option>
+            <option>smart_watches</option>
+            <option>wi-fi_routers</option>
+        </select>
+    </td>
+
+</tr>
+
+
+<tr>
+    <td><span>Product Stock</span><input type="number" name="istock" placeholder="add quantity of product" required></td>
+</tr>
 
 </table>
 </div>

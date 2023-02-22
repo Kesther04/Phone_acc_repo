@@ -14,8 +14,12 @@ $item_tb = $con->query("CREATE TABLE if not exists item_table
 (id int(100)not null primary key auto_increment,
 item_name varchar(150)not null,
 item_img varchar(150)not null,
+item_group varchar(150)not null,
+cost_price varchar(150)not null,
 item_price varchar(150)not null,
-dis_price varchar(150)not null,
+dis_perc varchar(150)not null,
+open_stock varchar(150)not null,
+close_stock varchar(150)not null,
 likes varchar(50)not null,
 date varchar(20)not null,
 time varchar(20)not null)ENGINE=innoDB");
@@ -42,5 +46,39 @@ if ($admin_tb) {
 }else {
     echo "<p>2nd not created</p>";
 }
+
+
+$feature_tb = $con->query("CREATE TABLE if not exists feature_table
+(id int(100)not null primary key auto_increment,
+item_id varchar(100)not null,
+item_name varchar(150)not null,
+feature_name varchar(150)not null,
+feature_prop text not null,
+date varchar(20)not null,
+time varchar(20)not null)ENGINE=innoDB");
+
+if ($feature_tb) {
+    echo "<p>3rd tb created</p>";
+}else {
+    echo "<p>3rd not created</p>";
+}
+
+
+$user_tb = $con->query("CREATE TABLE if not exists user_table
+(id int(100)not null primary key auto_increment,
+fullname varchar(120)not null,
+email varchar(120)not null,
+password  varchar(120)not null,
+b_add text not null,
+shp_add text not null,
+date varchar(20)not null,
+time varchar(20)not null)ENGINE=innoDB");
+
+if ($user_tb) {
+    echo "<p>4th tb created</p>";
+}else {
+    echo "<p>4th not created</p>";
+}
+
 
 ?>

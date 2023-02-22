@@ -91,14 +91,18 @@ header div{
     width:250px;
 }
 
+.header-input{
+    position: relative;
+}
 
 .header-input input{
     background:none;
     color:white;
     border:1px solid white;
     border-radius: 20px;
-    padding: 10px;
+    padding: 0px 40px 0px 20px;
     width:250px;
+    z-index: 0;
 }
 
 .header-input input:focus{
@@ -109,6 +113,8 @@ header div{
     position:absolute;
     right:10px;
     top:10px;
+    z-index:10;
+    width:20px;
 }
 
 .header-unit img {
@@ -117,8 +123,9 @@ header div{
 }
 
 .imgcat{
-    position:absolute;
+    position: absolute;
     right:10px;
+    cursor:pointer;
 }
 
 .imgcat img{
@@ -159,9 +166,10 @@ header div{
     height:450px;
     margin-left: 0px;
     display: flex;
-    border: 1px solid gray;
+    border: 0px solid gray;
     position: relative;
-    box-shadow: 0px 0px 10px 0px gray;
+    box-shadow: 0px 2px 5px 3px rgb(186, 192, 198);
+
 }
 
 
@@ -253,6 +261,35 @@ header div{
    
 }
 
+#dis-like{
+    display: none;
+}
+
+#like-btn{
+    display: block;
+    margin:5px;
+    width:50px;
+    position: relative;
+    float: right;
+}
+
+#like-btn img{
+    position: absolute;right:0;
+}
+
+#liked-btn{
+    display: none;
+    margin:5px;
+    width:50px;
+    position: relative;
+    float: right;
+}
+
+
+#liked-btn img{
+    position: absolute;right:0;
+}
+
 
 .inner-snd-snd{
     border:5px solid lightgray;
@@ -266,6 +303,14 @@ header div{
     height:60%;
     padding:10px;
     position: relative;
+}
+
+
+.inner-snd-snd-img button{
+    background: white;
+    color:black;
+    margin:5px;
+    border:1px solid white;
 }
 
 .inner-snd-snd-img span{
@@ -302,6 +347,12 @@ header div{
 }
 
 .inner-snd-snd-dis span{
+    text-decoration: line-through;
+    color:grey;
+}
+
+
+.acc-span{
     text-decoration: line-through;
     color:grey;
 }
@@ -356,7 +407,7 @@ header div{
 .last-sec-div{
     width:100%;
     height:auto;
-    background:  #DBDBDB;
+    background:  #dbdbdb;
     padding:30px 120px 100px 120px;
     display: flex;
     flex-direction: column;
@@ -570,6 +621,36 @@ footer{
     justify-content: space-between;
 }
 
+.list-adds-inner{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bil{
+    display: none;
+}
+
+.shp{
+    display: none;
+}
+
+.list-adds-inner span{
+    width:100%;
+    padding:10px 0px;
+    float: left;
+}
+
+.list-adds-inner input{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+}
+
+.list-adds button{
+    background: none;
+    padding:10px;
+}
+
 .list-adds div  > button{
     background: none;
     padding:10px;
@@ -592,7 +673,24 @@ footer{
     margin:20px 0px;
 }
 
+.acc-dit{
+    display: none;
+    flex-direction: column;
+    position: fixed;top:20px;right:20px;
+    background: #c5bebe;
+    padding:20px;
+    border-radius: 20px;
+    width:auto;
+    height: auto;
+}
 
+.acc-dit-inner{
+    width:auto;
+    height: auto;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
 
 .acc-det table{
     width:100%;
@@ -733,6 +831,10 @@ footer{
     flex-direction: column;
 }
 
+.thr-inner-inner-fst-purchase-div div:nth-child(2){
+    width:50%;
+}
+
 
 .snd-purchase-div{
     width:100%;
@@ -746,8 +848,25 @@ footer{
 .inner-snd-purchase-div{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:flex-start;
+    
 }
+
+.inner-snd-purchase-div table{
+    width:100%;
+}
+
+.inner-snd-purchase-div table tr td:nth-child(1){
+    font-weight: bold;
+}
+
+
+.inner-snd-purchase-div table tr td{
+    width:50%;
+    padding:10px;
+    border:1px solid gray;
+}
+
 
 .inner-snd-purchase-div li{
     list-style: disc;

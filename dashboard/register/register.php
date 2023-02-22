@@ -20,13 +20,12 @@
         <table>
         
             <tr>
-                <td>FULLNAME:</td>  <td><input type="text" value="ADMIN" name="full" readonly required></td>
+                <td><span>FULLNAME:</span><input type="text" value="ADMIN" name="full" readonly required></td>
             </tr>
 
             <tr>
-                <td>GENDER:</td> 
-                
                 <td>
+                    <span>GENDER:</span>
                     <select name="gender">
                         <option></option>
                         <option>MALE</option>
@@ -36,13 +35,13 @@
             </tr>
 
             <tr>
-                <td>EMAIL ADDRESS:</td>   <td><input type="text"  name="email" required></td>
+                <td> <span>EMAIL ADDRESS:</span><input type="text"  name="email" required></td>
             </tr>
 
             <tr>
-                <td>PASSWORD:</td>
-
                 <td>
+                    
+                <span>PASSWORD:</span>
                 <span>
                     
                     <input type="password"  name="pass" id="p-p-p" onclick="record()"  required>
@@ -57,7 +56,7 @@
             </tr>
 
             <tr>
-                <td>PHONE NUMBER:</td>     <td><input type="text"  name="pno"  required></td>
+                <td><span>PHONE NUMBER:</span><input type="text"  name="pno"  required></td>
             </tr>
 
         </table>

@@ -8,4 +8,18 @@ $(document).ready(function () {
     $('#losec').click(function(){
         md.slideUp(1000).css({'visibility':'hidden'});
     })
+
+    var b = $(".bil");
+    var sh = $(".shp");
+
+    $('#sh-bil').click(function () {
+        b.slideToggle(1000).css({'display':'block'});
+        $('#sh-bil').css({'display':'none'});
+        
+    })
+    
+    $('#sh-shp').click(function () {
+        sh.slideToggle(1000).css({'display':'block'});
+        $('#sh-shp').css({'display':'none'});
+    })
 })

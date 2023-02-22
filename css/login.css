@@ -1,23 +1,27 @@
 *{
     box-sizing: border-box;
-    margin:0;
     font-family: arial;
 }
 
 body{
-    margin:0;
-    width:100%;
     background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-sec{
     width:40%;
-    margin:100px;
-    margin-left:450px;
-    height:600px;
+    height:auto;
     border-radius:60px;
     background: #23BDDF;
-    float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding:30px;
+    margin:100px;
     
 }
 
@@ -30,7 +34,6 @@ body{
 .login-sec h1{
     text-align: center;
     padding:20px;
-    margin:10px;
     color:white; 
 }
 
@@ -38,16 +41,15 @@ body{
     color:white; 
 }
 
-.login-sec table{
-    margin-top: 50px;
-    margin-left: 20px;
-}
 
 .login-sec table tr td{
-    font-size: 20px;
-    margin:20px;
-    padding:20px;
+    font-size: 18px;
     color:white; 
+    padding:20px;
+}
+
+.login-sec table tr td span{
+    width:100%;
 }
 
 .login-sec table tr td a{
@@ -69,7 +71,7 @@ body{
 .login-sec table tr td input {
     padding:15px;
     border-radius: 15px;
-    width:300px;
+    width:100%;
 }
 
 .login-sec table tr td input:focus{
@@ -99,12 +101,16 @@ body{
 
 .form-sec{
     width:40%;
-    margin-top: 50px;
-    margin-left:450px;
-    height:720px;
+    margin:100px;
+    height:auto;
+    padding:30px;
     border-radius:60px;
     background: #23BDDF;
-    float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .form-sec h1{
@@ -118,15 +124,9 @@ body{
     color:white; 
 }
 
-.form-sec table{
-    margin-top: 50px;
-    margin-left: 20px;
-
-}
 
 .form-sec table tr td{
     font-size: 20px;
-    margin:20px;
     padding:20px;
     color:white; 
 }
@@ -137,6 +137,9 @@ body{
     font-size: 15px;
 }
 
+.form-sec table tr td span{
+    width:100%;
+}
 
 .form-sec table tr td a:hover{
     color:white; 
@@ -150,7 +153,7 @@ body{
 .form-sec table tr td input {
     padding:15px;
     border-radius: 15px;
-    width:300px;
+    width:100%;
 }
 
 .form-sec table tr td input:focus{
@@ -161,7 +164,7 @@ body{
 .form-sec table tr td select {
     padding:15px;
     border-radius: 15px;
-    width:300px;
+    width:100%;
 }
 
 .form-sec table tr td select:focus{
@@ -178,10 +181,10 @@ body{
     padding:1px;
 }
 #tock input{
-    width:60%;
+    width:100px;
 }
 #pock input{
-    width:60%;
+    width:100px;
 }
 
 #pock{

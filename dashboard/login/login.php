@@ -26,21 +26,23 @@ session_destroy();
             echo "<div class='msg-log'>$_GET[msg]</div>";
         }
     ?>
+
+    
     <table>
     
         <tr>
-            <td>EMAIL ADDRESS:</td> 
-            <td><input type="text" name="email" placeholder="EMAIL ADDRESS"></td>
+            <td><span>EMAIL ADDRESS:</span><input type="text" name="email" placeholder="Please Type in your Correct Email Address"></td>
         </tr>
         
         <tr>
-            <td>PASSWORD:</td> 
-            <td><input type="password" name="pass" placeholder="PASSWORD" id="p-pass"></td>
+            <td><span>PASSWORD:</span><input type="password" name="pass" placeholder="Please Type in your Password if registered" id="p-pass"></td>
         </tr>
 
         <tr>            
-            <td id="tock"><input type="button" value="TEXT" class="change-pass"  onclick="login()"></td>
-            <td id="pock"><input type="button" value="TEXT" class="change-pass"   onclick="lob()"></td>
+            <td>
+                <span id="tock"><input type="button" value="TEXT" class="change-pass"  onclick="login()"></span>
+                <span id="pock"><input type="button" value="TEXT" class="change-pass"   onclick="lob()"></span>
+            </td>
         </tr>
         <script src="../../js/reg.js"></script>
 

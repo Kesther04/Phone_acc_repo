@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+session_destroy();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +41,19 @@
             <div class="login"><h1><a href="login.php">Login</a></h1></div>
             <div><h1><a href="register.php">Register</a></h1></div>
         </div>
-        <form action="" method="post">
+        <form action="backend_login_user.php" method="post">
         <div class="snd-lr-content">
-           
+           <?php
+            if (isset($_GET['msg'])) {
+                echo '<div style=color:red;>'.$_GET['msg'].'</div>';
+            }
+           ?>
                 <p><input type="text" name="uname" placeholder="Username/Email"></p>
 
                 <p>
                     <span id="fp"><a href="#">Forgot Password?</a></span></br>
                     <input type="password" name="pass" placeholder="Password"><br>
-                    <input type="checkbox" name="" name="shp">Keep me logged in
+                    <input type="checkbox"  name="shp">Keep me logged in
                 </p>
 
                 <p><button>Login</button></p>

@@ -18,6 +18,23 @@ $(document).ready(function(){
         $(".open-dash").slideUp(1000).css({'display':'flex'});
     });
 
-                
+    
+    $("#like-btn").click(function(){
+        $("#liked-btn").fadeIn(300).css({'display':'block'});
+        $("#like-btn").fadeOut(300).css({'display':'none'});
+    });
+    
+    $("#liked-btn").click(function(){
+        $("#like-btn").fadeIn(300).css({'display':'block'});
+        $("#liked-btn").fadeOut(300).css({'display':'none'});
+    });
+
+    if ($("#dis-like").html()  > "0") {
+        $("#liked-btn").css({'display':'block'});
+        $("#like-btn").css({'display':'none'});
+    }else{
+        $("#like-btn").css({'display':'block'});
+        $("#liked-btn").css({'display':'none'});
+    }
 });
 

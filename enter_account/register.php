@@ -36,7 +36,7 @@
             <div><h1><a href="login.php">Login</a></h1></div>
             <div class="login"><h1><a href="register.php">Register</a></h1></div>
         </div>
-        <form action="" method="post">
+        <form action="backend_reg_user.php" method="post">
         <div class="snd-lr-content">
            
                 <p><input type="text" name="uname" placeholder="Username"></p>
@@ -45,6 +45,8 @@
 
                 <p><input type="password" name="pass" placeholder="Password"></p>
 
+                <input type="hidden" name="badd" required readonly>
+                <input type="hidden" name="shpadd" required readonly>
                 <p><button>Register</button></p>
             
         </div>

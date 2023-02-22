@@ -1,0 +1,203 @@
+<div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <span>
+          <p>20%</p>
+          <img src="img/orgcircle">
+        </span>
+        <img src="img/redhrt.png" class="hrt">
+        <img src="img/mtn.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>MTN Brandband Router 4G with free 30GB Data</h3>
+        <p><span>N10,000.00</span> N8,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+
+
+<div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/hwband.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Huawei Band 7</h3>
+        <p> N44,700.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/erpods.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Pole StylePod Earpods</h3>
+        <p><span></span>N25,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/boombox.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>JBL Boom Box 3 Speaker</h3>
+        <p><span></span> N470,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/ppd.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Poolee PD 40 Pro 40000 22.5W</h3>
+        <p><span></span> N25,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/pci.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Poolee C-12 iPhone Aluminium Cable</h3>
+        <p><span></span> N2,500.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/ppp.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Poolee 16GB Micro SDHC Card with Adapter</h3>
+        <p><span></span> N2,500.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/whd.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Beats Solo Pro Wireless Headphones</h3>
+        <p><span></span> N190,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/3a.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>JBL Partybox 310 - Portable Party Speaker with Long Lasting Battery</h3>
+        <p><span></span> N590,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/3b.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Apple Watch Series 3 44mm</h3>
+        <p><span></span> N135,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/pooleePD.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Seagate External Hard Drive 1TB</h3>
+        <p><span></span> N30,000.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="inner-snd-snd">
+      <div class="inner-snd-snd-img">
+        <img src="img/blhrt.png" class="hrt">
+        <img src="img/3c.png" class="main-img">
+      </div>
+      <div class="inner-snd-snd-dis">
+        <h3>Poolee Fast Charger TX-25</h3>
+        <p><span></span> N4,950.00</p>
+        <div class="cart-div">
+          <a href="#">Add to Cart</a>
+        </div>
+      </div>
+
+      
+    </div>

@@ -8,7 +8,7 @@
         float: left;
         width:50px;
         font-size: 30px;
-        background: #f5f5f5;
+        background:  #dbdbdb;
         border-radius: 10px;
         text-align: center;
         margin: 10px;
@@ -38,7 +38,7 @@
         width:100%;
         height:100%;
         position: fixed;top:0;
-        background: #f5f5f5;
+        background:  #dbdbdb;
         visibility: hidden;
         overflow: auto;
         z-index: 10;
@@ -55,11 +55,7 @@
     .con-btn{
         padding:20px;
         border-radius:10px;
-        width:20%;
-        background: rgb(74, 69, 69,0.4);
-        border:2px solid rgba(74, 69, 69,0.4);
-        color:whitesmoke;
-        cursor: pointer;
+       
     }
     
     
@@ -76,7 +72,7 @@
         float: left;
         width:50px;
         font-size: 30px;
-        background: #f5f5f5;
+        background:  #dbdbdb;
         border-radius: 10px;
         text-align: center;
         margin: 10px;
@@ -106,7 +102,7 @@
         width:100%;
         height:100%;
         position: fixed;top:0;
-        background: #f5f5f5;
+        background:  #dbdbdb;
         visibility: hidden;
         z-index: 10;
     }   
@@ -118,15 +114,28 @@
         float: left;
     }
 
+    .inner-secdc{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+    
+    .upd-sel-itm{
+        width:100%;
+    }
+    
+    .del-sel-itm{
+        width:100%;
+    }
+    
+    .item-div-con{
+        width:100%;
+    }
 
     .con-btn{
         padding:20px;
         border-radius:10px;
-        width:100%;
-        background: rgb(74, 69, 69,0.4);
-        border:2px solid rgba(74, 69, 69,0.4);
-        color:whitesmoke;
-        cursor: pointer;
+        
     }
     
     
