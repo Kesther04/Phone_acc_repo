@@ -16,11 +16,13 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         <div class="msg">    
             
             <div style="font-weight:bold;"><p>ARE YOU SURE YOU WANT TO DELETE THIS ITEM DETAILS</p></div>
+            <div class="inner-secdc">
             <form action="backend_sure_item_delete.php" method="post">
                 <div class="msa"></div>
                 <button class="aj-btn">Yes</button>
             </form>
             <button class="aj-btn"><a href="item_delete.php">No</a></button>
+            </div>
         </div>
 </div>
 
