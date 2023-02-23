@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 ?>
 
 <div id="masag">
-        <div class="msg">    
+        <div class="msgas">    
             
             <div style="font-weight:bold;"><p>ARE YOU SURE YOU WANT TO DELETE THIS ITEM DETAILS</p></div>
             <div class="inner-secdc">

@@ -72,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     <link rel='stylesheet' href='../../css/responsive_style.css' media='all'>
     <script src='../../js/jquery.js'></script>
     <script src='../../js/header_move.js'></script>
+    <script src='../../js/ajax.js'></script>
     <title>PURCHASE</title>
 </head>
 <body>

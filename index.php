@@ -14,21 +14,27 @@
 </head>
 <body>
 
-<?php require("nav_units/header.php");?>
+<?php 
+  require("nav_units/header.php");
+  require("dashboard/class/sel_class.php");   
+  $sel_ob = new SEL();
+
+?>
 
 <section class="first-sec-div">
-  <div><a href="#">Phone Chargers</a></div>
-  <div><a href="#">Power banks</a></div>
-  <div><a href="#">Memory cards</a></div>
-  <div><a href="#">Phone Cases</a></div>
-  <div><a href="#">Earpods</a></div>
-  <div><a href="#">Smart watches</a></div>
-  <div><a href="#">Screen guards</a></div>
-  <div><a href="#">Headphones</a></div>
-  <div><a href="#">Bluetooth speakers</a></div>
-  <div><a href="#">wi-fi routers</a></div>
-  <div><a href="#">Handsfree</a></div>
-  <div><a href="#">more...</a></div>
+  <?php
+    
+    $sel_con = $sel_ob->sel_nselup_gp();
+  
+    if ($sel_con) {
+
+      while ($row = $sel_con->fetch_assoc()) {
+        $avn =  str_replace('_',' ',$row['item_group']);
+  ?>
+        <div><a href="Accesories/<?php echo $row['item_group'];  ?>"><?php echo $avn; ?></a></div>
+
+  <?php  } } ?>
+  
 </section>
 
    
@@ -64,10 +70,7 @@
   <div class="snd-snd">
   <?php 
   
-    require("dashboard/class/sel_class.php"); 
-  
-    $sel_ob = new SEL();
-
+    
     $sel_con = $sel_ob->sel_nsel();
   
     if ($sel_con) {

@@ -106,7 +106,7 @@ class  SEL
     public function sel_nselup_gp(){
         require("d_con/database_connection.php");
 
-        $select = $con->query(" SELECT * FROM item_table  ");
+        $select = $con->query(" SELECT * FROM item_table GROUP BY(item_group)ASC");
 
         return $select;
     }

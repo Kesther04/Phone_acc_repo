@@ -57,7 +57,21 @@
         border-radius:10px;
        
     }
+
+    .msg{
+        width:100%;
+        height:100%;
+        padding:50px;
+        border-radius: 10px;
+    }
+
     
+    .msgas{
+        width:100%;
+        height:100%;
+        padding:50px;
+        border-radius: 10px;
+    }
     
 }
 
@@ -138,5 +152,18 @@
         
     }
     
-    
+
+    .msg{
+        width:100%;
+        height:500px;
+        padding:50px;
+        border-radius: 10px;
+    }
+
+    .msgas{
+        width:100%;
+        height:500px;
+        padding:50px;
+        border-radius: 10px;
+    }
 }

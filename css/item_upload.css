@@ -312,16 +312,18 @@ button{
 
 
 .msgas{
-    text-align: center;
     position: absolute;
-    overflow: auto;
     background-color: white;
-    width:80%;
-    height:600px;
-    margin:100px;
-    margin-left: 150px;
+    width:40%;
+    height:300px;
     padding:50px;
-    border-radius: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .msgas a{
