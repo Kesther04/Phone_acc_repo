@@ -955,7 +955,11 @@ footer{
     height:auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.snd-inner-thr-purchase-div .inner-snd-snd{
+    width:25%;
 }
 
 .cart-section{
