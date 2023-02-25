@@ -80,5 +80,25 @@ if ($user_tb) {
     echo "<p>4th not created</p>";
 }
 
+$del_tb = $con->query("CREATE TABLE if not exists del_table
+(id int(100)not null primary key auto_increment,
+item_name varchar(150)not null,
+item_img varchar(150)not null,
+item_group varchar(150)not null,
+cost_price varchar(150)not null,
+item_price varchar(150)not null,
+dis_perc varchar(150)not null,
+open_stock varchar(150)not null,
+close_stock varchar(150)not null,
+likes varchar(50)not null,
+date varchar(20)not null,
+time varchar(20)not null)ENGINE=innoDB");
+
+if ($del_tb) {
+    echo "<p>5th table created</p>";
+}else {
+    echo "<p>5th table not created</p>";
+}
+
 
 ?>

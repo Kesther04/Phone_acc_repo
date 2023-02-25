@@ -28,6 +28,14 @@ class  INS
     }
 
     
+    public function ins_item_del($nt,$img,$group,$cprice,$price,$dis_price,$stock,$cstock,$likes,$date,$time){
+        require("d_con/database_connection.php");
+
+        $insert = $con->query("INSERT INTO del_table (item_name,item_img,item_group,cost_price,item_price,dis_perc,open_stock,close_stock,likes,date,time)VALUE('$nt','$img','$group','$cprice','$price','$dis_price','$stock','$cstock','$likes','$date','$time')");
+
+        return $insert;
+    }
+    
     public function ins_feat($id,$iname,$fn,$fp,$date,$time){
         require("d_con/database_connection.php");
 

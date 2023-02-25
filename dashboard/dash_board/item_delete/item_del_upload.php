@@ -44,26 +44,26 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 <table>
 
     <tr>
-        <td><span>Product Name</span><input type="text" name="iname" value="<?php echo  $im = str_replace('-',' ',$row['item_name']); ?>" readonly required><input type="hidden" name="id" value="<?php echo $row['id'];  ?>" required readonly></td>
+        <td><span>Product Name</span><input type="text" name="iname" value="<?php echo $row['item_name']; ?>" readonly required><input type="hidden" name="id" value="<?php echo $row['id'];  ?>" required readonly></td>
 
         <td><span>Product Group</span><input type="text" name="igroup" value="<?php  echo $row['item_group'] ?>" readonly required></td>
     </tr>
 
     <tr>
-        <td><span>Cost Price</span><input type="number" name="icost" value="<?php echo  $im = str_replace('N','',$row['cost_price']); ?>" readonly required ></td>
+        <td><span>Cost Price</span><input type="text" name="icost" value="<?php echo  $row['cost_price']; ?>" readonly required ></td>
 
-        <td><span>Product Price</span><input type="number" name="iprice" value="<?php echo  $im = str_replace('N','',$row['item_price']); ?>" readonly required></td>
+        <td><span>Product Price</span><input type="text" name="iprice" value="<?php echo  $row['item_price']; ?>" readonly required></td>
     </tr>
 
 
 
     <tr>
-        <td><span>Product Discount Percentage</span><input type="number" name="idprc" value="<?php echo  $im =  $row['dis_perc']; ?>" readonly required></td>
-        <td><span>Add New Opening Stock</span><input type="number" name="istock" value="0" readonly required></td>
+        <td><span>Product Discount Percentage</span><input type="text" name="idprc" value="<?php echo $row['dis_perc']; ?>" readonly required></td>
+        <td><span>Opening Stock</span><input type="text" name="istock" value="<?php echo $row['open_stock']; ?>" readonly required></td>
     </tr>
 
     <tr>
-        <td><span>Current Stock Quantity</span><input type="number" name="cstock" value="<?php echo $row['close_stock'];  ?>" readonly required></td>
+        <td><span>Current Stock Quantity</span><input type="text" name="cstock" value="<?php echo $row['close_stock'];  ?>" readonly required><input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" readonly required><input type="hidden" name="likes" value="<?php echo $row['likes']; ?>" readonly required></td>
     </tr>
 </table>
 
