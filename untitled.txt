@@ -1,4 +1,4 @@
-<div class="inner-snd-snd">
+    <div class="inner-snd-snd">
       <div class="inner-snd-snd-img">
         <span>
           <p>20%</p>
@@ -13,11 +13,9 @@
         <div class="cart-div">
           <a href="#">Add to Cart</a>
         </div>
-      </div>
+    </div>
 
-
-
-<div class="inner-snd-snd">
+    <div class="inner-snd-snd">
       <div class="inner-snd-snd-img">
         <img src="img/blhrt.png" class="hrt">
         <img src="img/hwband.png" class="main-img">
@@ -29,8 +27,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     <div class="inner-snd-snd">
@@ -45,11 +41,8 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
-    
     <div class="inner-snd-snd">
       <div class="inner-snd-snd-img">
         <img src="img/blhrt.png" class="hrt">
@@ -62,8 +55,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -79,8 +70,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -96,8 +85,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -113,8 +100,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -130,8 +115,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -147,8 +130,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -164,8 +145,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -181,8 +160,6 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>
 
     
@@ -198,6 +175,4 @@
           <a href="#">Add to Cart</a>
         </div>
       </div>
-
-      
     </div>

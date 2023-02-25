@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css" media="all">
-    <link rel="stylesheet" href="../../css/responsive_style.css" media="all">
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/header_move.js"></script>
+    <link rel="stylesheet" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="../css/responsive_style.css" media="all">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/header_move.js"></script>
     <title>CART</title>
 </head>
 <body>
@@ -22,14 +22,14 @@
     </div>
 
     <div class="snd-cart-sec-divs">
-        <div class="fst-inner-scsd"><img src="../../img/hwband.png"></div>
+        <div class="fst-inner-scsd"><img src="../img/hwband.png"></div>
         
         <div class="snd-inner-scsd">
             <p><b>Huawei Band 7</b></p>     
             <p>N44,700.00</p>
             <span>
                 <script src="../../js/num.js"></script>
-                <div class="ell-btn" onclick="backw()"><img src="../../Accesories/img/btn_bk.png" ></div> <div id="ell-btn-no">1</div> <div class="ell-btn" onclick="forw();"><img src="../../Accesories/img/btn_fw.png"></div>
+                <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> <div id="ell-btn-no">1</div> <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
             </span>
             <p>N44,700.00</p>
             <p id="x-scsd">&times;</p>
