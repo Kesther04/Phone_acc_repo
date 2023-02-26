@@ -20,18 +20,20 @@
 
 
        <?php }else { echo ""; } ?>
-       <div id="dis-like"><?php echo $row['likes']; ?></div>
-       <form class='adl' action='../../like/addlike.php' method='post'> 
+       <div class="dis-like"><?php echo $liket = $row['likes']; ?></div>
+       <?php if ($liket == 0) { ?>
+        <form class='adl' action='../../like/addlike.php' method='post'> 
             <input type='hidden'  name='pt' value='<?php echo $row['item_name']; ?>' required>
             <input type='hidden' name='pid' value='<?php echo $row['id']; ?>' required>
-            <button id='like-btn'><img src="../../img/blhrt.png" class="hrt"></button>
+            <button class='like-btn'><img src="../../img/blhrt.png" class="hrt"></button>
         </form>
-
+       <?php }else { ?>
         <form class='ddl' action='../../like/dellike.php' method='post'> 
           <input type='hidden'  name='pt' value='<?php echo $row['item_name']; ?>' required>
           <input type='hidden' name='pid' value='<?php echo $row['id']; ?>' required>
-          <button id='liked-btn' ><img src="../../img/redhrt.png" class="hrt"></button>
+          <button class='liked-btn' ><img src="../../img/redhrt.png" class="hrt"></button>
         </form> 
+       <?php } ?>
 
 
         
@@ -60,15 +62,29 @@
           echo 'N'.$sol;
           ?>
         </p>
-
+        <div class="cart-div">
+          <form  action="" method="post">
+            <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>" required readonly>
+            <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" required readonly>
+            <input type="hidden" name="iprice" value="<?php echo $sol; ?>" required readonly>
+            <button>Add to Cart</button>
+          </form>
+         
+        </div>
 
        <?php }else { ?>
         <p><?php echo $row['item_price'];?></p>
+        <div class="cart-div">
+          <form  action="" method="post">
+            <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>" required readonly>
+            <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>"  required readonly>
+            <input type="hidden" name="iprice" value="<?php echo $row['item_price']; ?>"  required readonly>
+            <button>Add to Cart</button>
+          </form>
+         
+        </div>
        <?php } ?>
         
-        <div class="cart-div">
-          <a href="#">Add to Cart</a>
-        </div>
       </div>
 
       

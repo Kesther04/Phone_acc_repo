@@ -279,11 +279,11 @@ header div{
    
 }
 
-#dis-like{
+.dis-like{
     display: none;
 }
 
-#like-btn{
+.like-btn{
     display: block;
     margin:5px;
     width:50px;
@@ -291,12 +291,12 @@ header div{
     float: right;
 }
 
-#like-btn img{
+.like-btn img{
     position: absolute;right:0;
 }
 
-#liked-btn{
-    display: none;
+.liked-btn{
+    display: block;
     margin:5px;
     width:50px;
     position: relative;
@@ -304,9 +304,10 @@ header div{
 }
 
 
-#liked-btn img{
+.liked-btn img{
     position: absolute;right:0;
 }
+
 
 
 .inner-snd-snd{
@@ -388,8 +389,11 @@ header div{
     border-radius: 5px;
 }
 
-.cart-div a{
+.cart-div button{
     color:white;
+    background: none;
+    border:1px solid  #23BDDF;
+    font-size: 16px;
 }
 
 
@@ -823,6 +827,11 @@ footer{
     align-items: center;
 }
 
+.ell-btn-no{
+    border:1px solid grey;
+    padding:15px;
+}
+
 #ell-btn-no{
     border:1px solid grey;
     padding:15px;
@@ -1008,6 +1017,7 @@ footer{
 
 #x-scsd{
     font-size:40px;
+    cursor: pointer;
 }
 .snd-inner-scsd{
     display: flex;

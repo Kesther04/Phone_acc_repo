@@ -134,8 +134,13 @@ $(document).ready(function(){
             contentType:false,
             processData:false,
             success: function(dat) {
-                $(".dis-like").html(dat);      
-
+                  
+                
+                    $("#total-div").load("#total-div",function(){
+                        $(".dis-like").html(dat);   
+        
+                    })
+                
             }
             
         });    
@@ -150,9 +155,13 @@ $(document).ready(function(){
             cache:false,
             contentType:false,
             processData:false,
-            success: function(dat) {
-                $(".dis-like").html(dat);      
-
+            success: function(dat) {      
+                
+                    $("#total-div").load("#total-div",function(){
+                        $(".dis-like").html(dat);   
+        
+                    })
+                
             }
             
         });    
@@ -169,7 +178,12 @@ $(document).ready(function(){
             contentType:false,
             processData:false,
             success: function(dat) {
-                $(".dis-like").html(dat);      
+                
+                $("#total-div").load("#total-div",function(){
+                    $(".dis-like").html(dat);   
+    
+                })
+            
 
             }
             
@@ -186,7 +200,12 @@ $(document).ready(function(){
             contentType:false,
             processData:false,
             success: function(dat) {
-                $(".dis-like").html(dat);      
+                
+                $("#total-div").load("#total-div",function(){
+                    $(".dis-like").html(dat);   
+    
+                })
+              
 
             }
             

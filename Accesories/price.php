@@ -26,11 +26,19 @@
 
             echo 'N'.$sol;
           ?>
+           <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>"  required readonly>
+            <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>"  required readonly>
+            <input type="hidden" name="iprice"  value="<?php echo $sol; ?>"  required readonly>
+            <input type="hidden" name="aiprice"  value="<?php echo $sol; ?>"  required readonly>
         
 
 
        <?php }else { ?>
         <?php echo $row['item_price'];?>
+        <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>" required readonly>
+        <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" required readonly>
+        <input type="hidden" name="iprice"  value="<?php echo str_replace('N','',$row['item_price']); ?>" required readonly>
+        <input type="hidden" name="aiprice" value="<?php echo str_replace('N','',$row['item_price']); ?>" required readonly>
        <?php } ?>
         
       

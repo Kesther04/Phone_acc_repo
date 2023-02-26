@@ -26,16 +26,41 @@
         
         <div class="snd-inner-scsd">
             <p><b>Huawei Band 7</b></p>     
-            <p>N44,700.00</p>
-            <span>
-                <script src="../../js/num.js"></script>
-                <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> <div id="ell-btn-no">1</div> <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
+            <p>N44700</p>
+            <span class="inactive">
+                <script src="../js/num.js"></script>
+                <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> 
+                <div class="ell-btn-no">1</div> 
+                <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
             </span>
-            <p>N44,700.00</p>
-            <p id="x-scsd">&times;</p>
+            <p>N44700</p>
+            <p id="x-scsd" title="remove item from cart">&times;</p>
         </div>
 
+        
+
     </div>
+
+    <div class="snd-cart-sec-divs">
+        <div class="fst-inner-scsd"><img src="../img/hwband.png"></div>
+        
+        <div class="snd-inner-scsd">
+            <p><b>Huawei Band 7</b></p>     
+            <p>N44700</p>
+            <span class="active">
+                <script src="../js/num.js"></script>
+                <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> 
+                <div class="ell-btn-no">1</div> 
+                <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
+            </span>
+            <p>N44700</p>
+            <p id="x-scsd" title="remove item from cart">&times;</p>
+        </div>
+
+        
+
+    </div>
+
     
     <div class="thr-inner-scsd">
         <button>Update Cart</button>        

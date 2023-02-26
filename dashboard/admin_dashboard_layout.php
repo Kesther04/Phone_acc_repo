@@ -45,6 +45,14 @@
             </a>
         </div>
         <div class="dash-b">
+            <a href="../item_delete/item_delete.php">
+                <span>
+                <img src="../../../img/item_upload.svg"  class="fir-img"><img src="../../../img/lblog.svg" class="sec-img" >
+                RESTORE ITEM
+                </span>
+            </a>
+        </div>
+        <div class="dash-b">
            
                 
             <button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='../../login/login.php';}">

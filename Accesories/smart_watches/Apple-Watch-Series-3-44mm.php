@@ -13,7 +13,7 @@
     <title>PURCHASE</title>
 </head>
 <body>
-            
+            <section id="total-div">
     <?php require('../header.php');?>
                 
     <section class='purchase'>
@@ -23,7 +23,7 @@
                         <img src='../img/3b.png'>
                     </div>
                     <div class='snd-inner-fst-purchase-div '>
-                        
+                        <form id="cart-form" action="" method="post">
                         <div>
                             <p><?php require('../price.php'); ?></p>
                         </div>
@@ -35,11 +35,11 @@
                             </span>
             
                             <div class='cart-div'>
-                                <a href='#'>Add to Cart</a>
+                                <button>Add to Cart</button>
                             </div>
             
                         </div>
-                    
+                        </form>
                     </div>
                     
                     <div class='thr-inner-fst-purchase-div' >
@@ -149,6 +149,7 @@
             
             
     <?php require('../footer.php');  ?>
+    </section>
 </body>
 </html>
             

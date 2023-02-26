@@ -17,9 +17,10 @@
     <title><?php echo $din; ?></title>
 </head>
 <body>
+  <section id="total-div">
     <?php require("../header.php"); ?>
-
     <?php require("../item_group.php") ?>
     <?php require("../footer.php"); ?>
+  </section>
 </body>
 </html>

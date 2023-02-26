@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     <title>PURCHASE</title>
 </head>
 <body>
-            
+    <section id='total-div'>
     <?php require('../header.php');?>
                 
     <section class='purchase'>
@@ -86,23 +86,23 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
                         <img src='../img/$img'>
                     </div>
                     <div class='snd-inner-fst-purchase-div '>
-                        
+                        <form id='cart-form' action='' method='post'>
                         <div>
                             <p><?php require('../price.php'); ?></p>
                         </div>
-            
+        
                         <div class='snd-inner-inner-fst-purchase-div'>
                             <span>
                                 <script src='../../js/num.js'></script>
                                 <div class='ell-btn' onclick='backw()'><img src='../img/btn_bk.png' ></div> <div id='ell-btn-no'>1</div> <div class='ell-btn' onclick='forw();'><img src='../img/btn_fw.png'></div>
                             </span>
-            
+        
                             <div class='cart-div'>
-                                <a href='#'>Add to Cart</a>
+                                <button>Add to Cart</button>
                             </div>
-            
+        
                         </div>
-                    
+                        </form>
                     </div>
                     
                     <div class='thr-inner-fst-purchase-div' >
@@ -212,6 +212,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
             
             
     <?php require('../footer.php');  ?>
+    </section>
 </body>
 </html>
             
