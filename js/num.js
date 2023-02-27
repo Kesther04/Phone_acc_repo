@@ -7,12 +7,14 @@
             
         if (a==1) {
             var sub = num.innerHTML=1;
-            var prc = (forms.elements['iprice'].value)*sub;
-            forms.elements['aiprice'].value = prc;
+            var prc = (forms.elements['aiprice'].value)*sub;
+            forms.elements['iprice'].value = prc;
+            forms.elements['no'].value =  (forms.elements['iprice'].value)/(forms.elements['aiprice'].value);
         }else{
             var kub=num.innerHTML=a--;
-            var prc = (forms.elements['iprice'].value)*kub;
-            forms.elements['aiprice'].value = prc;
+            var prc = (forms.elements['aiprice'].value)*kub;
+            forms.elements['iprice'].value = prc;
+            forms.elements['no'].value =  (forms.elements['iprice'].value)/(forms.elements['aiprice'].value);
         }
         
                             
@@ -21,15 +23,7 @@
     function forw() {
         var forms = document.getElementById('cart-form');
         fa = document.getElementById('ell-btn-no').innerHTML=a++;
-        var prc = (forms.elements['iprice'].value)*fa;
-        forms.elements['aiprice'].value = prc;
+        var prc = (forms.elements['aiprice'].value)*fa;
+        forms.elements['iprice'].value = prc;
+        forms.elements['no'].value =  (forms.elements['iprice'].value)/(forms.elements['aiprice'].value);
     }
-
-$(document).ready(function () {
-   var rum = $(".snd-cart-sec-divs span .ell-btn");
-   $(".ell-btn").click(function () {
-        if ($("span.active")) {
-            
-        }
-   });
-});

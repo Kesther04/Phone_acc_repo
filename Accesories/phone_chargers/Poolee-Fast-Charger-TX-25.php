@@ -22,25 +22,7 @@
                     <div class='fst-inner-fst-purchase-div'>
                         <img src='../img/3c.png'>
                     </div>
-                    <div class='snd-inner-fst-purchase-div '>
-                        <form id="cart-form" action="" method="post">
-                        <div>
-                            <p><?php require('../price.php'); ?></p>
-                        </div>
-            
-                        <div class='snd-inner-inner-fst-purchase-div'>
-                            <span>
-                                <script src='../../js/num.js'></script>
-                                <div class='ell-btn' onclick='backw()'><img src='../img/btn_bk.png' ></div> <div id='ell-btn-no'>1</div> <div class='ell-btn' onclick='forw();'><img src='../img/btn_fw.png'></div>
-                            </span>
-            
-                            <div class='cart-div'>
-                                <button>Add to Cart</button>
-                            </div>
-            
-                        </div>
-                        </form>
-                    </div>
+                    <?php require('../price.php'); ?>
                     
                     <div class='thr-inner-fst-purchase-div' >
                         <div class='thr-inner-inner-fst-purchase-div'>

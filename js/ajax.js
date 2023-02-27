@@ -167,6 +167,78 @@ $(document).ready(function(){
         });    
     });
 
+    $(".cart-form").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'cart/backend_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {      
+                
+                $("#total-div").load("#total-div");
+                
+            }
+            
+        });    
+    });
+
+    
+    $(".cart-form").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'../../cart/backend_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {      
+                
+                $("#total-div").load("#total-div");
+                
+            }
+            
+        });    
+    });
+
+    $(".cart-form").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'backend_dir_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {      
+                
+                $("#total-div").load("#total-div");
+                
+            }
+            
+        });    
+    });
+
+    $(".cartal-form").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'backend_del_all.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {      
+                
+                $("#total-div").load("#total-div");
+                
+            }
+            
+        });    
+    });
     
     $(".adl").submit(function(e){
         e.preventDefault();

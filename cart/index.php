@@ -8,58 +8,69 @@
     <link rel="stylesheet" href="../css/responsive_style.css" media="all">
     <script src="../js/jquery.js"></script>
     <script src="../js/header_move.js"></script>
+    <script src="../js/ajax.js"></script>
     <title>CART</title>
 </head>
 <body>
-   <?php require("../nav_units/account_header.php");  ?>
+
+    <section id="total-div">
+   <?php 
+        require("../nav_units/account_header.php");
+        
+        require("../dashboard/class/sel_class.php");
+    
+        $sel_ob = new SEL();  
+    ?>
 
 <section class="cart-section">
     <div class="fst-cart-sec-divs">
 
-        <div class="fst-inner-fcsd">"Huawei Band 7" has been added to your cart <span><a href="#">Continue shopping</a></span></div>
+        <div class="fst-inner-fcsd">
+        <?php
+            $sel_cart = $sel_ob->sel_carts();
+            if ($sel_cart) {
+                while ($row = $sel_cart->fetch_assoc()) {
+            
+        ?>
+            <p>"<?php echo str_replace('-',' ',$row['item_name']); ?>" has been added to your cart</p> 
+        <?php  } } ?>
+            <span><a href="../index.php" target="blank">Continue shopping</a></span>
+        </div>
         <h1>Your Shopping Cart Summary</h1>
-        <p>Review your cart with 0 items and total N0.00</p>
+        <form class="cartal-form" action="backend_del_all.php" method="post">
+            <p class="x-fcsd"><button>Review your cart with 0 items and total N0.00</button></p>
+        </form>
     </div>
 
+    <?php
+        $sel_cart = $sel_ob->sel_carts();
+        if ($sel_cart) {
+            while ($row = $sel_cart->fetch_assoc()) {
+            
+    ?>
     <div class="snd-cart-sec-divs">
-        <div class="fst-inner-scsd"><img src="../img/hwband.png"></div>
-        
+        <div class="fst-inner-scsd"><img src="../Accesories/img/<?php echo $row['item_img']; ?>"></div>
+       
         <div class="snd-inner-scsd">
-            <p><b>Huawei Band 7</b></p>     
-            <p>N44700</p>
+            <p><b><?php echo str_replace('-',' ',$row['item_name']); ?></b></p>     
+            <p><?php echo 'N'.($row['item_price'])/($row['item_no']); ?></p>
             <span class="inactive">
                 <script src="../js/num.js"></script>
                 <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> 
-                <div class="ell-btn-no">1</div> 
+                <div class="ell-btn-no"><?php echo $row['item_no']; ?></div> 
                 <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
             </span>
-            <p>N44700</p>
-            <p id="x-scsd" title="remove item from cart">&times;</p>
+            <p><?php echo 'N'.$row['item_price']; ?></p>
+            <form class="cart-form" action="backend_dir_cart.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $row['item_id']; ?>">
+                <p class="x-scsd" title="remove item from cart"><button>&times;</button></p>
+            </form>
         </div>
-
-        
 
     </div>
 
-    <div class="snd-cart-sec-divs">
-        <div class="fst-inner-scsd"><img src="../img/hwband.png"></div>
-        
-        <div class="snd-inner-scsd">
-            <p><b>Huawei Band 7</b></p>     
-            <p>N44700</p>
-            <span class="active">
-                <script src="../js/num.js"></script>
-                <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> 
-                <div class="ell-btn-no">1</div> 
-                <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
-            </span>
-            <p>N44700</p>
-            <p id="x-scsd" title="remove item from cart">&times;</p>
-        </div>
-
-        
-
-    </div>
+    <?php  } } ?>
+   
 
     
     <div class="thr-inner-scsd">
@@ -80,27 +91,58 @@
         </div>
         </form>
     </div>
+
+
     <div class="fth-cart-sec-divs">
         
         <div class="fst-inner-fthcsd">
             <h4>Cart totals</h4>
             <p>Subtotal</p>
         </div>
-
+        <?php
+            $sel_cart = $sel_ob->sel_cart_sup();
+            if ($sel_cart) {
+                while ($dow = $sel_cart->fetch_assoc()) {
+                
+        ?>
         <div class="snd-inner-fthcsd">
-            <p>N44,700.00</p>
+       
+            <p>
+                <?php  
+                    if ($dow['SUM(item_price)'] == "") {
+                        echo 'N'.'0.00';
+                    }else {
+                        $st = str_replace('N','',$dow['SUM(item_price)']);
+                        echo 'N'.$st; 
+                    }
+                    
+                ?>
+            </p>
+        
         </div>
 
         <div class="thr-inner-fthcsd">
             <h4>Total</h4>
-            <p>N44,700.00</p>
+            <p>
+                <?php  
+                    if ($dow['SUM(item_price)'] == "") {
+                        echo 'N'.'0.00';
+                    }else {
+                        $st = str_replace('N','',$dow['SUM(item_price)']);
+                        echo 'N'.$st; 
+                    }
+                    
+                ?>
+            </p>
             <p><button>Proceed to checkout</button></p>
         </div>
+        <?php } } ?>
        
     </div>
 </section>
 
 <?php require("../nav_units/account_footer.php");  ?>
 
+</section>
 </body>
 </html>

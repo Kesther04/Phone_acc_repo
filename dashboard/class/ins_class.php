@@ -43,6 +43,14 @@ class  INS
 
         return $insert;
     }
+
+    public function ins_cart($id,$name,$img,$price,$no,$date,$time){
+        require("d_con/database_connection.php");
+
+        $insert = $con->query("INSERT INTO cart_table (item_id,item_name,item_img,item_price,item_no,date,time)VALUE('$id','$name','$img','$price','$no','$date','$time')");
+
+        return $insert;
+    }
 }
 
 

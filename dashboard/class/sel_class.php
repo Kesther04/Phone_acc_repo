@@ -121,6 +121,34 @@ class  SEL
 
         return $select;
     }
+
+    
+    
+    public function sel_cart_id($id){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM cart_table WHERE  item_id='$id' ");
+
+        return $select;
+    }
+
+    
+    public function sel_carts(){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM cart_table ");
+
+        return $select;
+    }
+
+    
+    public function sel_cart_sup(){
+        require("d_con/database_connection.php");
+        
+        $select = $con->query(" SELECT *,SUM(item_price) FROM cart_table ");
+
+        return $select;
+    }
 }
 
 

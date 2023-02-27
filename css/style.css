@@ -35,6 +35,8 @@ header{
     flex-direction: row;
     justify-content: center;
     padding:30px 120px;
+    position: fixed;
+    z-index: 100;
 }
 
 header a{
@@ -142,6 +144,7 @@ header div{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 .first-sec-div div{
@@ -151,7 +154,6 @@ header div{
     margin:20px;
     padding:10px;
     text-align: center;
-   
 }
 
 
@@ -252,6 +254,10 @@ header div{
     flex-direction: column;
 }
 
+.snd-sec-margin{
+    margin-top: 100px;
+}
+
 .acce-div{
     text-transform: uppercase;
     text-align: center;
@@ -311,11 +317,17 @@ header div{
 
 
 .inner-snd-snd{
-    border:5px solid lightgray;
+    border:2px solid lightgray;
     border-radius: 20px 0px 20px 0px;
     width:20%;
     height:500px;
     margin:10px;
+    transition: 0.2s ease-in;
+}
+
+.inner-snd-snd:hover{
+    box-shadow: 0px 0px 5px 0px rgb(186, 192, 198);
+    margin:10px 12px;
 }
 
 .inner-snd-snd-img{
@@ -356,7 +368,7 @@ header div{
 
 .inner-snd-snd-dis{
     height:30%;
-    border-top:1px solid black;
+    border-top:2px solid lightgray;
     padding:10px;
     width:100%;
 }
@@ -389,10 +401,55 @@ header div{
     border-radius: 5px;
 }
 
+
+.carted-div{
+    text-align: center;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #46df23;
+    border: 5px solid #FFFFFF;
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+
+
+.cartful-div{
+    text-align: center;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #dfd623;
+    border: 5px solid #FFFFFF;
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
 .cart-div button{
     color:white;
     background: none;
     border:1px solid  #23BDDF;
+    font-size: 16px;
+}
+
+
+.carted-div button{
+    color:white;
+    background: none;
+    border:1px solid  #46df23;
+    font-size: 16px;
+}
+
+
+.cartful-div button{
+    color:white;
+    background: none;
+    border:1px solid   #dfd623;
     font-size: 16px;
 }
 
@@ -516,6 +573,7 @@ footer{
     flex-direction: row;   
     justify-content: space-between;
     padding:40px 120px;
+    margin-top: 100px;
 }
 
 .first-lr-div{
@@ -600,6 +658,7 @@ footer{
     flex-direction: column;
     background: #D9D9D9;
     margin:50px;
+    margin-top: 150px;
 }
 
 .dashboard{
@@ -766,6 +825,7 @@ footer{
     height:auto;
     justify-content: space-around;
     padding:10px 100px;
+    margin-top:100px;
 }
 
 .fst-purchase-div{
@@ -977,6 +1037,7 @@ footer{
     display: flex;
     flex-direction: column;
     padding:10px 100px;
+    margin-top:100px;
 }
 
 .fst-cart-sec-divs{
@@ -1015,10 +1076,21 @@ footer{
     padding:20px 20px;
 }
 
-#x-scsd{
+.x-fcsd button{
+    background: white;
+    border:1px solid white;
+    font-size:20px;
+    cursor: pointer;
+}
+
+
+.x-scsd button{
+    background: white;
+    border:1px solid white;
     font-size:40px;
     cursor: pointer;
 }
+
 .snd-inner-scsd{
     display: flex;
     flex-direction: row;

@@ -70,7 +70,6 @@
   
   <div class="snd-snd">
   <?php 
-  
     
     $sel_con = $sel_ob->sel_nsel();
   
@@ -134,28 +133,62 @@
           ?>
         </p>
 
-        <div class="cart-div">
-          <form  action="" method="post">
+        
+          <form class="cart-form" action="cart/backend_cart.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required readonly>
+            <input type="hidden" name="no" value="1" required readonly>
             <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>" required readonly>
             <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" required readonly>
             <input type="hidden" name="iprice" value="<?php echo $sol; ?>" required readonly>
-            <button>Add to Cart</button>
+            <?php   
+            $id = $row['id'];
+            $sel_cart = $sel_ob->sel_cart_id($id);
+            if ($sel_cart->num_rows > 0) {
+                $dow = $sel_cart->fetch_assoc();
+                $rid = $dow['item_id'];
+                
+            }
+            ?>
+            <?php if ($sel_cart->num_rows > 0 AND $rid == $row['id']) { ?>
+            <div class="carted-div"><button>Added to Cart</button> </div>
+            <?php }elseif ($row['close_stock'] == 0) { ?>
+              <div class="cartful-div"><button disabled>Out of Stock</button> </div>
+            <?php  }else{ ?>
+            <div class="cart-div"><button>Add to Cart</button> </div>
+            <?php } ?>
+            
           </form>
-         
-        </div>
-
-
+            
+          
        <?php }else { ?>
         <p><?php echo $row['item_price'];?></p>
-        <div class="cart-div">
-          <form  action="" method="post">
+        
+          <form class="cart-form" action="cart/backend_cart.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required readonly>
+            <input type="hidden" name="no" value="1" required readonly>
             <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>" required readonly>
             <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" required readonly>
-            <input type="hidden" name="iprice" value="<?php echo $row['item_price']; ?>" required readonly>
-            <button>Add to Cart</button>
+            <input type="hidden" name="iprice" value="<?php echo str_replace('N','',$row['item_price']); ?>" required readonly>
+            <?php   
+            $id = $row['id'];
+            $sel_cart = $sel_ob->sel_cart_id($id);
+            if ($sel_cart->num_rows > 0) {
+                $dow = $sel_cart->fetch_assoc();
+                $rid = $dow['item_id'];
+                
+            }
+            ?>
+            <?php if ($sel_cart->num_rows > 0 AND $rid == $row['id']) { ?>
+            <div class="carted-div"><button>Added to Cart</button> </div>
+            <?php }elseif ($row['close_stock'] == 0) { ?>
+              <div class="cartful-div"><button disabled>Out of Stock</button> </div>
+           <?php  }else{ ?>
+            <div class="cart-div"><button>Add to Cart</button> </div>
+            <?php } ?>
+            
           </form>
-         
-        </div>
+            
+        
        <?php } ?>
         
        
@@ -164,6 +197,8 @@
       
     </div>
   <?php } } ?>
+
+  
 
   </div>
 
