@@ -16,7 +16,7 @@
         <img src="../../../img/logo.png" class="dash-logo">
     
         <div class="dash-b">
-            <a href="../../../index.php" target="blank">
+            <a href="../../../" target="blank">
                 <span>
                     <img src="../../../img/home.svg" class="fir-img"><img src="../../../img/lhome.svg" class="sec-img">HOME
                 </span>

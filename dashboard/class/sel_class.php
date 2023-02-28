@@ -133,6 +133,15 @@ class  SEL
     }
 
     
+    public function sel_cart_issd($id,$item_id){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM cart_table WHERE id='$id'  item_id='$item_id' ");
+
+        return $select;
+    }
+
+    
     public function sel_carts(){
         require("d_con/database_connection.php");
 

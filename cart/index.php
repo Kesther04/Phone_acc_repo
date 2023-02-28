@@ -54,11 +54,24 @@
         <div class="snd-inner-scsd">
             <p><b><?php echo str_replace('-',' ',$row['item_name']); ?></b></p>     
             <p><?php echo 'N'.($row['item_price'])/($row['item_no']); ?></p>
-            <span class="inactive">
-                <script src="../js/num.js"></script>
-                <div class="ell-btn" onclick="backw()"><img src="../Accesories/img/btn_bk.png" ></div> 
-                <div class="ell-btn-no"><?php echo $row['item_no']; ?></div> 
-                <div class="ell-btn" onclick="forw();"><img src="../Accesories/img/btn_fw.png"></div>
+            <span>
+                <!-- <script src="../js/numb.js"></script> -->
+                    <form class="cart-map-back" action="backend_delup_cart.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $row['id']; ?>" readonly required>
+                        <input type="hidden" name="item_id" value="<?php echo $row['item_id']; ?>" readonly required>
+                        <input type="hidden" name="price" value="<?php echo ($row['item_price'])/($row['item_no']); ?>" readonly required>
+                        <input type="hidden" name="item_no" value="<?php echo $row['item_no']; ?>" readonly required>
+                        <div class="ell-btn"><button><img src="../Accesories/img/btn_bk.png"></button></div>
+                    </form>
+                        <div class="ell-btn-no"><?php echo $row['item_no']; ?></div> 
+                    <form class="cart-map-for" action="backend_up_cart.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $row['id']; ?>" readonly required>
+                        <input type="hidden" name="item_id" value="<?php echo $row['item_id']; ?>" readonly required>
+                        <input type="hidden" name="item_no" value="<?php echo $row['item_no']; ?>" readonly required>
+                        <input type="hidden" name="price" value="<?php echo ($row['item_price'])/($row['item_no']); ?>" readonly required>
+                        <div class="ell-btn"><button><img src="../Accesories/img/btn_fw.png"></button></div> 
+                    </form>                
+                
             </span>
             <p><?php echo 'N'.$row['item_price']; ?></p>
             <form class="cart-form" action="backend_dir_cart.php" method="post">

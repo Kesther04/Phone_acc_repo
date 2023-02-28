@@ -887,6 +887,11 @@ footer{
     align-items: center;
 }
 
+.ell-btn button{
+    background: none;
+    border:0px solid gray;
+}
+
 .ell-btn-no{
     border:1px solid grey;
     padding:15px;
@@ -1074,6 +1079,14 @@ footer{
     display: flex;
     flex-direction: row;
     padding:20px 20px;
+    transition:0.7s;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.snd-cart-sec-divs:hover{
+    box-shadow: 0px 2px 5px 2px rgb(186, 192, 198);
+    border:1px solid lightgray;
 }
 
 .x-fcsd button{

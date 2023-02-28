@@ -18,6 +18,15 @@ class  UPD
         return $update;
     }
 
+    
+    public function upd_cart_tb($price,$item_no,$id,$item_id){
+        require("d_con/database_connection.php");
+
+        $update = $con->query("UPDATE cart_table SET item_price='$price',item_no='$item_no' WHERE id ='$id' AND item_id = '$item_id' ");
+
+        return $update;
+    }
+
     public function upd_user_tb($full,$email,$pass,$id){
         require("d_con/database_connection.php");
 
