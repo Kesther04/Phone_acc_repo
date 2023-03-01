@@ -102,11 +102,29 @@ class  SEL
 
         return $select;
     }
+
+    
+    public function sel_namedelgp($group){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM del_table WHERE item_group='$group' ");
+
+        return $select;
+    }
     
     public function sel_nselup_gp(){
         require("d_con/database_connection.php");
 
         $select = $con->query(" SELECT * FROM item_table GROUP BY(item_group)ASC");
+
+        return $select;
+    }
+
+    
+    public function sel_nseldel_gp(){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM del_table GROUP BY(item_group)ASC");
 
         return $select;
     }
@@ -123,6 +141,14 @@ class  SEL
     }
 
     
+    public function sel_itemdel_id($pid){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM del_table WHERE  id='$pid' ");
+
+        return $select;
+    }
+
     
     public function sel_cart_id($id){
         require("d_con/database_connection.php");

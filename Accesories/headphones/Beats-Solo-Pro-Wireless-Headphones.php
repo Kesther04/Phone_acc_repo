@@ -13,7 +13,7 @@
     <title>PURCHASE</title>
 </head>
 <body>
-            <section id="total-div">
+    <section id='total-div'>
     <?php require('../header.php');?>
                 
     <section class='purchase'>

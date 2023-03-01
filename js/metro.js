@@ -10,12 +10,8 @@ $(document).ready(function () {
             contentType:false,
             processData:false,
             success: function(dat) {
+                $(".con-mat").slideDown(1000).css({'visibility':'visible'});
                 $(".mat").html(dat); 
-                var feat = $('.active');
-                var nfeat = feat.next().css({'display':'flex'});
-                
-                    feat.fadeOut(300).removeClass("active");
-                    nfeat.fadeIn(300).addClass("active");
             }
             
         });    

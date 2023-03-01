@@ -15,14 +15,14 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         while ($row = $sel_dis->fetch_assoc()) {
 ?>
 
-
-<form class="news_upl" action="backend_item_update.php" method="post" enctype="multipart/form-data">
     <div id="masag">
         <div class="msg">    
             <div class="msa"></div>
-            <button class="aj-btn"><a href="item_update.php">OKAY</a></button>
+            <button class="aj-btn"><a href="item_update.php" title="return to item update page">COMPLETE</a></button>
         </div>
     </div>
+<form class="news_upl" action="backend_item_update.php" method="post" enctype="multipart/form-data">
+    
 
 <div class="sec-div-container">
 

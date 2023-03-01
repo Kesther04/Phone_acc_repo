@@ -9,6 +9,14 @@ class  DEL
         return $del;
     }    
 
+    public function del_delitem($id){
+        require("d_con/database_connection.php");
+
+        $del = $con->query("DELETE FROM del_table WHERE id = '$id'");
+
+        return $del;
+    }    
+
     
     public function del_carts_all(){
         require("d_con/database_connection.php");

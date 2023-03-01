@@ -45,7 +45,7 @@
             </a>
         </div>
         <div class="dash-b">
-            <a href="../item_delete/item_delete.php">
+            <a href="../item_restore/item_restore.php">
                 <span>
                 <img src="../../../img/item_upload.svg"  class="fir-img"><img src="../../../img/lblog.svg" class="sec-img" >
                 RESTORE ITEM

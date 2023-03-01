@@ -9,11 +9,11 @@
     <link rel='stylesheet' href='../../css/responsive_style.css' media='all'>
     <script src='../../js/jquery.js'></script>
     <script src='../../js/header_move.js'></script>
-    <script src="../../js/ajax.js"></script>
+    <script src='../../js/ajax.js'></script>
     <title>PURCHASE</title>
 </head>
 <body>
-            <section id="total-div">
+    <section id='total-div'>
     <?php require('../header.php');?>
                 
     <section class='purchase'>

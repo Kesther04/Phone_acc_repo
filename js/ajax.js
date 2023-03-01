@@ -54,6 +54,25 @@ $(document).ready(function(){
         });    
     });
 
+    
+    $(".news_upl").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'backend_item_restore.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#masag").css({'visibility':'visible'});
+                $(".msa").html(dat);            
+
+            }
+            
+        });    
+    });
+
     $(".upd-itm").submit(function(e){
         e.preventDefault();
         $.ajax({
@@ -107,6 +126,23 @@ $(document).ready(function(){
         });    
     });
 
+    $(".res-sel-itm").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'item_res_sel.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $(".item-div-con").html(dat);            
+
+            }
+            
+        });    
+    });
+
     
     $(".cart-map-for").submit(function(e){
         e.preventDefault();
@@ -147,6 +183,24 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             url:'item_del_upload.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $(".seco-div-container").html(dat);            
+
+            }
+            
+        });    
+    });
+
+
+    $(".res-itm").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'item_res_upload.php',
             type:'post',
             data:new FormData(this),
             cache:false,

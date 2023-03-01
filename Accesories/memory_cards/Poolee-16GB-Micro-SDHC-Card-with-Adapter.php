@@ -17,10 +17,10 @@
     <?php require('../header.php');?>
                 
     <section class='purchase'>
-                <h1 class='purch-prod-header'>JBL Boom Box 3 Speaker</h1>
+                <h1 class='purch-prod-header'>Poolee 16GB Micro SDHC Card with Adapter</h1>
                 <div class='fst-purchase-div'>
                     <div class='fst-inner-fst-purchase-div'>
-                        <img src='../img/boombox.png'>
+                        <img src='../img/ppp.png'>
                     </div>
                     <?php require('../price.php'); ?>
                     
@@ -65,7 +65,7 @@
                 </div>
             
                 <div class='snd-purchase-div'>
-                    <h1 class='purch-prod-header'>JBL Boom Box 3 Speaker</h1>
+                    <h1 class='purch-prod-header'>Poolee 16GB Micro SDHC Card with Adapter</h1>
             
                     <div class='inner-snd-purchase-div'>
 

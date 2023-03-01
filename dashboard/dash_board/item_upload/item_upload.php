@@ -25,7 +25,7 @@
     <div id="masag">
         <div class="msg">    
             <div class="msa"></div>
-            <button class="aj-btn"><a href="item_upload.php">OKAY</a></button>
+            <button class="aj-btn"><a href="item_upload.php" title="return to item upload page">COMPLETE</a></button>
         </div>
     </div>
 

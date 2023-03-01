@@ -161,6 +161,10 @@ button{
     width:50%;
 }
 
+.res-sel-itm{
+    width:50%;
+}
+
 .item-div-con{
     width:50%;
 }
@@ -339,29 +343,53 @@ button{
     cursor: pointer;
 }
 
+.gen-feat-div{
+    border-radius:10px;
+    font-weight: bold;
+    box-shadow: 2px 4px 5px 3px rgb(225, 225, 225);
+}
 
 form.feature-div{
-    display: none;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width:100%;
     padding:20px;
 }
 
-form.active{
+.feature-div div{
+    padding:10px 0px;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.feature-div span{
+    width:100%;
+    padding:5px;
+} 
+
 .fn-div{
-    background:white;
-    border:1px solid white;
-    padding:none;
     font-weight: bold;
+    width:300px;
+    padding:14px;
+    border-radius: 10px;
+    border:0.6px solid lightgray;
+}
+
+.fn-div:focus{
+    outline: none;
+    border:0.6px solid rgb(99, 99, 245);
+    box-shadow: 0px 0px 8px  0px rgb(142, 142, 247);
+    transition: 0.7s ease-in;
 }
 
 .feature-div textarea{
     padding:14px;
     border-radius: 10px;
     border:0.6px solid lightgray;
+    width:300px;
 }
 
 .feature-div textarea:focus{
@@ -383,4 +411,17 @@ form.active{
 .feature-div button:hover{
     background: rgb(74, 69, 69,0.6);
     border:2px solid rgb(74, 69, 69,0.6);
+}
+
+.con-mat{
+    visibility: hidden;
+    width:auto;
+    height:50px;
+    background:whitesmoke;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }

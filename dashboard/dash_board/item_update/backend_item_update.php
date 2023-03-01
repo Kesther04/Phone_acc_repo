@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD']=="POST") {
-    $iname = $_POST['iname'];
+    $iname = str_replace(' ','-',$_POST['iname']);
     $igroup = $_POST['igroup'];
     $id = $_POST['id'];
     $cprice = 'N'.$_POST['icost'];
@@ -31,7 +31,8 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     
     $up_nec = $up_ob->upd_item_tb($cprice,$price,$dis_price,$ostock,$costock,$id);
     if ($up_nec) {
-        echo "<p>Item Details Updated Successfully</p>";
+        //echo "<p>Item Details Updated Successfully";
+        header ("location:item_feature?group=$igroup&name=$iname");
     }else {
         echo "<p>Item Details Not Updated</p>";
     }
