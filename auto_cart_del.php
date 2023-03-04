@@ -9,7 +9,7 @@
     $del_ob = new DEL();
 
     $sel_cart_all = $sel_ob->sel_carts($sess);
-    if ($sel_cart_all) {
+    if ($sel_cart_all->num_rows>0) {
         $row = $sel_cart_all->fetch_assoc();
         $rdow = $row['date'];
         $rtow = $row['time'];
