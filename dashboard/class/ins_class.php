@@ -44,12 +44,21 @@ class  INS
         return $insert;
     }
 
-    public function ins_cart($id,$name,$img,$price,$no,$date,$time){
+    public function ins_cart($id,$name,$img,$price,$no,$sess,$date,$time){
         require("d_con/database_connection.php");
 
-        $insert = $con->query("INSERT INTO cart_table (item_id,item_name,item_img,item_price,item_no,date,time)VALUE('$id','$name','$img','$price','$no','$date','$time')");
+        $insert = $con->query("INSERT INTO cart_table (item_id,item_name,item_img,item_price,item_no,session,date,time)VALUE('$id','$name','$img','$price','$no','$sess','$date','$time')");
 
         return $insert;
+    }
+
+    
+    public function ins_like($pid,$pt,$sess,$likes,$date,$time){
+        require("d_con/database_connection.php");
+
+        $inse = $con->query("INSERT INTO likes_table (item_id,item_name,session,likes,date,time)VALUE('$pid','$pt','$sess','$likes','$date','$time')");
+
+        return $inse;
     }
 }
 

@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 
             $url = '../../../'.'Accesories'.'/'.$group.'/'.$nt.'.php';
             $content = "
+<?php require('../../session.php'); ?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>

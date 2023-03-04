@@ -87,6 +87,15 @@ class  SEL
     }
 
     
+    public function sel_pt_lk_tb($pana,$sess){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM likes_table WHERE item_name='$pana' AND session='$sess' ");
+
+        return $select;
+    }
+
+    
     public function sel_nselup(){
         require("d_con/database_connection.php");
 
@@ -150,10 +159,10 @@ class  SEL
     }
 
     
-    public function sel_cart_id($id){
+    public function sel_cart_id($id,$sess){
         require("d_con/database_connection.php");
 
-        $select = $con->query(" SELECT * FROM cart_table WHERE  item_id='$id' ");
+        $select = $con->query(" SELECT * FROM cart_table WHERE  item_id='$id' AND session='$sess' ");
 
         return $select;
     }
@@ -168,19 +177,27 @@ class  SEL
     }
 
     
-    public function sel_carts(){
+    public function sel_carts($sess){
         require("d_con/database_connection.php");
 
-        $select = $con->query(" SELECT * FROM cart_table ");
+        $select = $con->query(" SELECT * FROM cart_table WHERE session = '$sess' ");
 
         return $select;
     }
 
     
-    public function sel_cart_sup(){
+    public function sel_cart_sup($sess){
         require("d_con/database_connection.php");
         
-        $select = $con->query(" SELECT *,SUM(item_price) FROM cart_table ");
+        $select = $con->query(" SELECT *,SUM(item_price) FROM cart_table WHERE session = '$sess' ");
+
+        return $select;
+    }
+    
+    public function sel_lk_tb($pt,$pid){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT *,SUM(likes) FROM likes_table WHERE item_name='$pt' AND item_id='$pid' ");
 
         return $select;
     }

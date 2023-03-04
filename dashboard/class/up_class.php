@@ -19,10 +19,10 @@ class  UPD
     }
 
     
-    public function upd_cart_tb($price,$item_no,$id,$item_id){
+    public function upd_cart_tb($price,$item_no,$id,$item_id,$sess){
         require("d_con/database_connection.php");
 
-        $update = $con->query("UPDATE cart_table SET item_price='$price',item_no='$item_no' WHERE id ='$id' AND item_id = '$item_id' ");
+        $update = $con->query("UPDATE cart_table SET item_price='$price',item_no='$item_no' WHERE id ='$id' AND item_id = '$item_id'AND session = '$sess' ");
 
         return $update;
     }

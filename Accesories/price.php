@@ -8,6 +8,8 @@
     $nt = str_replace('.php','', $pageName);
 
     $sel_ob = new SEL();
+    $sess = $_SESSION['USER'];
+    require("../auto_cart_del.php");
     
     $sel_con = $sel_ob->sel_nprc($nt);
   
@@ -47,20 +49,19 @@
             <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>"  required readonly>
             <input type="hidden" name="aiprice"  value="<?php echo $sol; ?>"  required readonly>
             <input type="hidden" name="iprice"  value="<?php echo $sol; ?>"  required readonly>
+            <input type="hidden" name="sess" value="<?php echo $_SESSION['USER']; ?>" required readonly>
             <?php   
-            $id = $row['id'];
-            $sel_cart = $sel_ob->sel_cart_id($id);
-            if ($sel_cart->num_rows > 0) {
-                $dow = $sel_cart->fetch_assoc();
-                $rid = $dow['item_id'];
-                
-            }
+              $id = $row['id'];
+              $sess = $_SESSION['USER'];
             ?>
-            <?php if ($sel_cart->num_rows > 0 AND $rid == $row['id']) { ?>
+            <?php
+            $sel_cart = $sel_ob->sel_cart_id($id,$sess);
+            if ($sel_cart->num_rows > 0) {
+            ?>
             <div class="carted-div"><button>Added to Cart</button> </div>
             <?php }elseif ($row['close_stock'] == 0) { ?>
               <div class="cartful-div"><button disabled>Out of Stock</button> </div>
-            <?php  }else{ ?>
+           <?php  }else{ ?>
             <div class="cart-div"><button>Add to Cart</button> </div>
             <?php } ?>
           </div>
@@ -86,22 +87,21 @@
           <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" required readonly>
           <input type="hidden" name="aiprice"  value="<?php echo str_replace('N','',$row['item_price']); ?>" required readonly>
           <input type="hidden" name="iprice" value="<?php echo str_replace('N','',$row['item_price']); ?>" required readonly>
-          <?php   
-            $id = $row['id'];
-            $sel_cart = $sel_ob->sel_cart_id($id);
-            if ($sel_cart->num_rows > 0) {
-                $dow = $sel_cart->fetch_assoc();
-                $rid = $dow['item_id'];
-                
-            }
+          <input type="hidden" name="sess" value="<?php echo $_SESSION['USER']; ?>" required readonly>
+            <?php   
+              $id = $row['id'];
+              $sess = $_SESSION['USER'];
             ?>
-            <?php if ($sel_cart->num_rows > 0 AND $rid == $row['id']) { ?>
+            <?php
+            $sel_cart = $sel_ob->sel_cart_id($id,$sess);
+            if ($sel_cart->num_rows > 0) {
+            ?>
             <div class="carted-div"><button>Added to Cart</button> </div>
             <?php }elseif ($row['close_stock'] == 0) { ?>
               <div class="cartful-div"><button disabled>Out of Stock</button> </div>
-            <?php  }else{ ?>
+           <?php  }else{ ?>
             <div class="cart-div"><button>Add to Cart</button> </div>
-          <?php } ?>
+            <?php } ?>
         </div>
        <?php } ?>
         

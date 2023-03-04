@@ -107,6 +107,7 @@ item_name varchar(150)not null,
 item_img varchar(150)not null,
 item_price varchar(150)not null,
 item_no varchar(150)not null,
+session varchar(50)not null,
 date varchar(20)not null,
 time varchar(20)not null)ENGINE=innoDB");
 
@@ -116,4 +117,18 @@ if ($cart_tb) {
     echo "<p>6th table not created</p>";
 }
 
+
+$likes_tb = $con->query("CREATE TABLE if not exists likes_table
+(id int(100)not null primary key auto_increment,
+item_id int(100)not null,
+item_name varchar(500)not null,
+session varchar(50)not null,
+likes varchar(50)not null,
+date varchar(20)not null,
+time varchar(20)not null)ENGINE=innoDB");
+if ($likes_tb) {
+    echo "<p>7th table created</p>";
+}else {
+    echo "<p>7th table not created</p>";
+}
 ?>

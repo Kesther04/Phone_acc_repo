@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $price = $_POST['price'];
     $dio = $item_no-$new_no;
     $dprice = $dio*$price;
+    $sess = $_POST['sess'];
     require("../dashboard/class/up_class.php");
 
     $up_ob = new UPD();
@@ -15,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         echo "no update can be made";
     }else {
         
-        $up_con = $up_ob->upd_cart_tb($dprice,$dio,$id,$item_id);
+        $up_con = $up_ob->upd_cart_tb($dprice,$dio,$id,$item_id,$sess);
             if ($up_con) {
                 echo "cart updated successfully";
             }else {

@@ -390,7 +390,6 @@ header div{
 
 .cart-div{
     text-align: center;
-    padding:10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -404,7 +403,6 @@ header div{
 
 .carted-div{
     text-align: center;
-    padding:10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -419,7 +417,6 @@ header div{
 
 .cartful-div{
     text-align: center;
-    padding:10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -435,6 +432,8 @@ header div{
     background: none;
     border:1px solid  #23BDDF;
     font-size: 16px;
+    width:100%;
+    padding:10px;
 }
 
 
@@ -443,6 +442,8 @@ header div{
     background: none;
     border:1px solid  #46df23;
     font-size: 16px;
+    width:100%;
+    padding:10px;
 }
 
 
@@ -451,6 +452,8 @@ header div{
     background: none;
     border:1px solid   #dfd623;
     font-size: 16px;
+    width:100%;
+    padding:10px;
 }
 
 

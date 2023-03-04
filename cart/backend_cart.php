@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $img = $_POST['img'];
     $price = $_POST['iprice'];
     $no = $_POST['no'];
+    $sess = $_POST['sess'];
     $date = date("d-m-y");
     $hr = date("h")+1;
     $time = date("$hr:i:s.a");
@@ -22,17 +23,18 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     
     $sel_ob = new SEL();
 
-    $sel_cart = $sel_ob->sel_cart_id($id);
+    $sel_cart = $sel_ob->sel_cart_id($id,$sess);
     if ($sel_cart->num_rows > 0) {
         $row = $sel_cart->fetch_assoc();
         $rid = $row['item_id'];
+        $csess = $row['session'];
         
     }
 
     
-    if ($sel_cart->num_rows > 0 AND $rid == $id) {
+    if ($sel_cart->num_rows > 0 AND $rid == $id AND $csess == $sess) {
 
-        $del_cart = $del_ob->del_cart_id($id);
+        $del_cart = $del_ob->del_cart_id($id,$sess);
         if ($del_cart) {
             echo "delete successful";    
         }else {
@@ -41,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 
     } else {
        
-        $ins_cart = $ins_ob->ins_cart($id,$name,$img,$price,$no,$date,$time);
+        $ins_cart = $ins_ob->ins_cart($id,$name,$img,$price,$no,$sess,$date,$time);
         if ($ins_cart) {
             echo "successful";
         }else {

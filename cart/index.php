@@ -1,3 +1,4 @@
+<?php require("../session.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,9 @@
         require("../dashboard/class/sel_class.php");
     
         $sel_ob = new SEL();  
+        $sess = $_SESSION['USER'];
+
+        require("auto_cart_del.php");
     ?>
 
 <section class="cart-section">
@@ -27,7 +31,7 @@
 
         <div class="fst-inner-fcsd">
         <?php
-            $sel_cart = $sel_ob->sel_carts();
+            $sel_cart = $sel_ob->sel_carts($sess);
             if ($sel_cart) {
                 while ($row = $sel_cart->fetch_assoc()) {
             
@@ -38,12 +42,13 @@
         </div>
         <h1>Your Shopping Cart Summary</h1>
         <form class="cartal-form" action="backend_del_all.php" method="post">
+            <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
             <p class="x-fcsd"><button>Review your cart with 0 items and total N0.00</button></p>
         </form>
     </div>
 
     <?php
-        $sel_cart = $sel_ob->sel_carts();
+        $sel_cart = $sel_ob->sel_carts($sess);
         if ($sel_cart) {
             while ($row = $sel_cart->fetch_assoc()) {
             
@@ -55,12 +60,13 @@
             <p><b><?php echo str_replace('-',' ',$row['item_name']); ?></b></p>     
             <p><?php echo 'N'.($row['item_price'])/($row['item_no']); ?></p>
             <span>
-                <!-- <script src="../js/numb.js"></script> -->
+                
                     <form class="cart-map-back" action="backend_delup_cart.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $row['id']; ?>" readonly required>
                         <input type="hidden" name="item_id" value="<?php echo $row['item_id']; ?>" readonly required>
                         <input type="hidden" name="price" value="<?php echo ($row['item_price'])/($row['item_no']); ?>" readonly required>
                         <input type="hidden" name="item_no" value="<?php echo $row['item_no']; ?>" readonly required>
+                        <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
                         <div class="ell-btn"><button><img src="../Accesories/img/btn_bk.png"></button></div>
                     </form>
                         <div class="ell-btn-no"><?php echo $row['item_no']; ?></div> 
@@ -69,6 +75,7 @@
                         <input type="hidden" name="item_id" value="<?php echo $row['item_id']; ?>" readonly required>
                         <input type="hidden" name="item_no" value="<?php echo $row['item_no']; ?>" readonly required>
                         <input type="hidden" name="price" value="<?php echo ($row['item_price'])/($row['item_no']); ?>" readonly required>
+                        <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
                         <div class="ell-btn"><button><img src="../Accesories/img/btn_fw.png"></button></div> 
                     </form>                
                 
@@ -76,6 +83,7 @@
             <p><?php echo 'N'.$row['item_price']; ?></p>
             <form class="cart-form" action="backend_dir_cart.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $row['item_id']; ?>">
+                <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
                 <p class="x-scsd" title="remove item from cart"><button>&times;</button></p>
             </form>
         </div>
@@ -113,7 +121,7 @@
             <p>Subtotal</p>
         </div>
         <?php
-            $sel_cart = $sel_ob->sel_cart_sup();
+            $sel_cart = $sel_ob->sel_cart_sup($sess);
             if ($sel_cart) {
                 while ($dow = $sel_cart->fetch_assoc()) {
                 
