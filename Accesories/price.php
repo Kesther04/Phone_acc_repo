@@ -45,7 +45,7 @@
             
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required readonly>
             <input type="hidden" name="no" value="1" required readonly>
-           <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>"  required readonly>
+            <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>"  required readonly>
             <input type="hidden" name="img" value="<?php echo $row['item_img']; ?>"  required readonly>
             <input type="hidden" name="aiprice"  value="<?php echo $sol; ?>"  required readonly>
             <input type="hidden" name="iprice"  value="<?php echo $sol; ?>"  required readonly>
@@ -67,7 +67,7 @@
           </div>
 
 
-       <?php }else { ?>
+        <?php }else { ?>
         <div>
             <p><?php echo $row['item_price'];?></p>
         </div>
