@@ -45,10 +45,11 @@
 
 </section>
 
-
 <section class="purchase">
+    <div class="thr-purchase-div">
     <div class='snd-inner-thr-purchase-div'>
         <?php require("../dis_item.php"); ?>
+    </div>
     </div>
 </section>
 
