@@ -179,6 +179,77 @@ $(document).ready(function(){
         });    
     });
 
+
+    $(".cart-map-for").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'cart/backend_up_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#total-div").load("#total-div");      
+
+            }
+            
+        });    
+    });
+
+    
+    $(".cart-map-back").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'cart/backend_delup_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#total-div").load("#total-div");      
+
+            }
+            
+        });    
+    });
+
+    $(".cart-map-for").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'../../cart/backend_up_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#total-div").load("#total-div");      
+
+            }
+            
+        });    
+    });
+
+    
+    $(".cart-map-back").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'../../cart/backend_delup_cart.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#total-div").load("#total-div");      
+
+            }
+            
+        });    
+    });
+
     $(".del-itm").submit(function(e){
         e.preventDefault();
         $.ajax({

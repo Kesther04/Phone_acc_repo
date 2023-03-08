@@ -1,6 +1,6 @@
 
 <div class='snd-inner-fst-purchase-div '>
-<form id="cart-form" class="cart-form" action="../../cart/backend_cart.php" method="post">
+
 <?php 
     
 
@@ -22,27 +22,22 @@
         if ($row['dis_perc'] > 0) { ?>
         
           <div>
-          <p>
-          <span class="acc-span"><?php echo $row['item_price'];?></span>
-          <?php
+            <p>
+            <span class="acc-span"><?php echo $row['item_price'];?></span>
+            <?php
               $prcal = str_replace('N','',$row['item_price']);
               $pren = $row['dis_perc'];
               $sol = $prcal -(($pren/100)*$prcal);
-          ?>
+            ?>
           
             <?php echo 'N'.$sol; ?>
 
-          </p>
+            </p>
           </div>
             
-          <div class='snd-inner-inner-fst-purchase-div'>
-            <span>
-                <script src='../../js/num.js'></script>
-                <div class='ell-btn' onclick='backw()'><img src='../img/btn_bk.png' ></div> 
-                <div id='ell-btn-no'>1</div> 
-                <div class='ell-btn' onclick='forw();'><img src='../img/btn_fw.png'></div>
-            </span>
-            
+        <div class='snd-inner-inner-fst-purchase-div'>
+           
+          <form id="cart-form" class="cart-form" action="../../cart/backend_cart.php" method="post">
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required readonly>
             <input type="hidden" name="no" value="1" required readonly>
             <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>"  required readonly>
@@ -54,17 +49,40 @@
               $id = $row['id'];
               $sess = $_SESSION['USER'];
             ?>
-            <?php
+             <?php
             $sel_cart = $sel_ob->sel_cart_id($id,$sess);
             if ($sel_cart->num_rows > 0) {
+              $dow = $sel_cart->fetch_assoc();
             ?>
-            <div class="carted-div"><button>Added to Cart</button> </div>
+          </form>
+          <div class="comb-ctd-div">
+            <form class="cart-map-back" action="../../cart/backend_delup_cart.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $dow['id']; ?>" readonly required>
+            <input type="hidden" name="item_id" value="<?php echo $dow['item_id']; ?>" readonly required>
+            <input type="hidden" name="price" value="<?php echo ($dow['item_price'])/($dow['item_no']); ?>" readonly required>
+            <input type="hidden" name="item_no" value="<?php echo $dow['item_no']; ?>" readonly required>
+            <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
+            <div class="carted-div"><button>-</button></div>
+            </form>
+            
+            <div class="mid-ctd-div"><?php echo $dow['item_no']; ?></div>
+            <form class="cart-map-for" action="../../cart/backend_up_cart.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $dow['id']; ?>" readonly required>
+            <input type="hidden" name="item_id" value="<?php echo $dow['item_id']; ?>" readonly required>
+            <input type="hidden" name="item_no" value="<?php echo $dow['item_no']; ?>" readonly required>
+            <input type="hidden" name="price" value="<?php echo ($dow['item_price'])/($dow['item_no']); ?>" readonly required>
+            <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
+            <div class="carted-div"><button>+</button></div> 
+            </form>       
+          </div>
             <?php }elseif ($row['close_stock'] == 0) { ?>
               <div class="cartful-div"><button disabled>Out of Stock</button> </div>
-           <?php  }else{ ?>
+          </form>
+              <?php  }else{ ?>
             <div class="cart-div"><button>Add to Cart</button> </div>
+          </form>
             <?php } ?>
-          </div>
+        </div>
 
 
         <?php }else { ?>
@@ -72,15 +90,10 @@
             <p><?php echo $row['item_price'];?></p>
         </div>
         <div class='snd-inner-inner-fst-purchase-div'>
-          <span>
-            <script src='../../js/num.js'></script>
-            <div class='ell-btn' onclick='backw()'><img src='../img/btn_bk.png' ></div> 
-            <div id='ell-btn-no'>1</div> 
-            <div class='ell-btn' onclick='forw();'><img src='../img/btn_fw.png'></div>
-          </span>
+          
             
             
-        
+          <form id="cart-form" class="cart-form" action="../../cart/backend_cart.php" method="post">
           <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required readonly>
           <input type="hidden" name="no" value="1" required readonly>
           <input type="hidden" name="iname" value="<?php echo $row['item_name']; ?>" required readonly>
@@ -92,15 +105,38 @@
               $id = $row['id'];
               $sess = $_SESSION['USER'];
             ?>
-            <?php
+             <?php
             $sel_cart = $sel_ob->sel_cart_id($id,$sess);
             if ($sel_cart->num_rows > 0) {
+              $dow = $sel_cart->fetch_assoc();
             ?>
-            <div class="carted-div"><button>Added to Cart</button> </div>
+          </form>
+          <div class="comb-ctd-div">
+            <form class="cart-map-back" action="../../cart/backend_delup_cart.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $dow['id']; ?>" readonly required>
+            <input type="hidden" name="item_id" value="<?php echo $dow['item_id']; ?>" readonly required>
+            <input type="hidden" name="price" value="<?php echo ($dow['item_price'])/($dow['item_no']); ?>" readonly required>
+            <input type="hidden" name="item_no" value="<?php echo $dow['item_no']; ?>" readonly required>
+            <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
+            <div class="carted-div"><button>-</button></div>
+            </form>
+            
+            <div class="mid-ctd-div"><?php echo $dow['item_no']; ?></div>
+            <form class="cart-map-for" action="../../cart/backend_up_cart.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $dow['id']; ?>" readonly required>
+            <input type="hidden" name="item_id" value="<?php echo $dow['item_id']; ?>" readonly required>
+            <input type="hidden" name="item_no" value="<?php echo $dow['item_no']; ?>" readonly required>
+            <input type="hidden" name="price" value="<?php echo ($dow['item_price'])/($dow['item_no']); ?>" readonly required>
+            <input type="hidden" name="sess" value="<?php echo $sess; ?>" readonly required>
+            <div class="carted-div"><button>+</button></div> 
+            </form>       
+          </div>
             <?php }elseif ($row['close_stock'] == 0) { ?>
               <div class="cartful-div"><button disabled>Out of Stock</button> </div>
-           <?php  }else{ ?>
+          </form>
+              <?php  }else{ ?>
             <div class="cart-div"><button>Add to Cart</button> </div>
+          </form>
             <?php } ?>
         </div>
        <?php } ?>
@@ -113,5 +149,5 @@
                         
             
                         
-</form>
+
 </div>

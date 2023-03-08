@@ -78,7 +78,7 @@ header div{
 }
 
 .red-symb{
-    border-radius:100%;
+    border-radius:50%;
     padding:2px 4px;
     position: absolute;top:0px;right:-2px;
     font-size: 12px;
@@ -435,6 +435,20 @@ header div{
     border-radius: 5px;
 }
 
+.comb-ctd-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    border:1px solid  #46df23;
+}
+
+.mid-ctd-div{
+    font-size: 16px;
+    padding:10px;
+}
 
 .carted-div:hover{
     text-align: center;
@@ -517,12 +531,7 @@ header div{
 
 
 .carted-div button:hover{
-    color:white;
-    background: none;
     border:1px solid  #329b1b;
-    font-size: 16px;
-    width:100%;
-    padding:10px;
 }
 
 
@@ -944,17 +953,10 @@ footer{
 
 .snd-inner-inner-fst-purchase-div{
     display: flex;
-    flex-direction: row;
     border:1px solid grey;
 }
 
 
-.snd-inner-inner-fst-purchase-div span{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 
 .ell-btn{

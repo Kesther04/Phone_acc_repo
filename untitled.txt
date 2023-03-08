@@ -176,3 +176,11 @@
         </div>
       </div>
     </div>
+
+
+<!-- <span>
+            <script src='../../js/num.js'></script>
+            <div class='ell-btn' onclick='backw()'><img src='../img/btn_bk.png' ></div> 
+            <div id='ell-btn-no'>1</div> 
+            <div class='ell-btn' onclick='forw();'><img src='../img/btn_fw.png'></div>
+          </span> -->
