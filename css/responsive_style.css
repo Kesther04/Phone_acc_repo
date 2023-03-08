@@ -6,6 +6,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        padding:0px;
     }
 
     .inner-snd-snd{
@@ -51,21 +52,35 @@
 
     header{
         width: 100%;
-        height: 100px;
+        height: auto;
         left: 0px;
         top: 0px;
         background: #23BDDF;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
-        padding:20px;
+        padding:0px;
+        
     }
 
 
     .logo-div{
-        width:50%;
+        width:100%;
+        height:50px;
+        padding:5px 10px;
     }
 
+
+    .omega-header-unit{
+        width:100%;
+        height:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top:1px solid lightgray;
+        padding:3px 10px;
+    }
+    
 
     .open-div{
         display: flex;
@@ -92,9 +107,9 @@
 
     .header-unit img {
         margin:10px;
-        width:30px;
-        height:30px;
-        display: block;
+        display: flex;
+        width:50px;
+        height:50px;
     }
 
     .imgcat img{
@@ -111,7 +126,7 @@
         visibility: hidden;
         position: absolute;top:0px;left:0px;
         background: #23BDDF;
-        height:800px;
+        height:300px;
         overflow: auto;
         flex-direction: column;
         justify-content: space-around;
@@ -124,6 +139,7 @@
         flex-direction: column;
         margin:10px;
         justify-content: space-evenly;
+        padding:0px;
     }
 
 
@@ -133,19 +149,32 @@
         border:1px solid white;
         border-radius: 20px;
         padding: 10px;
-        width:auto;
+        width:100%;
     }
-    
-    
+
+    .header-input{
+        position: relative;
+    }
+
     .header-input input{
         background:none;
         color:white;
         border:1px solid white;
         border-radius: 20px;
         padding: 10px 40px 10px 10px;
-        width:auto;
+        width:100%;
+        z-index: 0;
     }
+    
 
+    .snd-header-unit button{
+        background:none;
+        color:white;
+        border:1px solid white;
+        border-radius: 20px;
+        padding: 10px;
+        width:100px;
+    }
 }
 
 
@@ -153,21 +182,35 @@
 
     header{
         width: 100%;
-        height: 100px;
+        height: auto;
         left: 0px;
         top: 0px;
         background: #23BDDF;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
-        padding:20px;
+        padding:0px;
+        
     }
 
 
     .logo-div{
-        width:50%;
+        width:100%;
+        height:50px;
+        padding:5px 10px;
     }
 
+
+    .omega-header-unit{
+        width:100%;
+        height:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top:1px solid lightgray;
+        padding:3px 10px;
+    }
+    
 
     .open-div{
         display: flex;
@@ -194,9 +237,9 @@
 
     .header-unit img {
         margin:10px;
-        width:20px;
-        height:20px;
-        display: block;
+        display: flex;
+        width:50px;
+        height:50px;
     }
 
     .imgcat img{
@@ -213,7 +256,7 @@
         visibility: hidden;
         position: absolute;top:0px;left:0px;
         background: #23BDDF;
-        height:350px;
+        height:300px;
         overflow: auto;
         flex-direction: column;
         justify-content: space-around;
@@ -226,6 +269,7 @@
         flex-direction: column;
         margin:10px;
         justify-content: space-evenly;
+        padding:0px;
     }
 
 
@@ -235,19 +279,33 @@
         border:1px solid white;
         border-radius: 20px;
         padding: 10px;
-        width:auto;
+        width:100%;
     }
-    
-    
+
+    .header-input{
+        position: relative;
+    }
+
     .header-input input{
         background:none;
         color:white;
         border:1px solid white;
         border-radius: 20px;
         padding: 10px 40px 10px 10px;
-        width:auto;
+        width:100%;
+        z-index: 0;
     }
+    
 
+    .snd-header-unit button{
+        background:none;
+        color:white;
+        border:1px solid white;
+        border-radius: 20px;
+        padding: 10px;
+        width:100px;
+    }
+    
     .after-fs-div{
         display: flex;
         flex-direction: column;
@@ -709,22 +767,35 @@
 
     header{
         width: 100%;
-        height: 100px;
+        height: auto;
         left: 0px;
         top: 0px;
         background: #23BDDF;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
-        padding:20px;
+        padding:0px;
         
     }
 
 
     .logo-div{
-        width:50%;
+        width:100%;
+        height:50px;
+        padding:5px 10px;
     }
 
+
+    .omega-header-unit{
+        width:100%;
+        height:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top:1px solid lightgray;
+        padding:3px 10px;
+    }
+    
 
     .open-div{
         display: flex;
@@ -783,6 +854,7 @@
         flex-direction: column;
         margin:10px;
         justify-content: space-evenly;
+        padding:0px;
     }
 
 
@@ -809,6 +881,15 @@
         z-index: 0;
     }
     
+
+    .snd-header-unit button{
+        background:none;
+        color:white;
+        border:1px solid white;
+        border-radius: 20px;
+        padding: 10px;
+        width:100px;
+    }
     
 
     .first-sec-div{

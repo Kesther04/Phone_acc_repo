@@ -12,7 +12,7 @@
     <title>ACCOUNT</title>
 </head>
 <body>
-
+<section id="total-div">
 <?php require("../nav_units/account_header.php");  ?>
 
 <section class="account-div">
@@ -85,6 +85,13 @@
 </section>
 
 
+<section class="purchase">
+    <div class='snd-inner-thr-purchase-div'>
+        <?php require("../dis_item.php"); ?>
+    </div>
+</section>
+
 <?php require("../nav_units/account_footer.php");  ?>
+</section>
 </body>
 </html>
