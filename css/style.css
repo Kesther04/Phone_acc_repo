@@ -77,6 +77,15 @@ header div{
     justify-content: space-evenly;
 }
 
+.red-symb{
+    border-radius:100%;
+    padding:2px 4px;
+    position: absolute;top:0px;right:-2px;
+    font-size: 12px;
+    background: red;
+
+}
+
 
 .close-div{
     display: block;
@@ -367,7 +376,7 @@ header div{
 }
 
 .inner-snd-snd-dis{
-    height:30%;
+    height:auto;
     border-top:2px solid lightgray;
     padding:10px;
     width:100%;

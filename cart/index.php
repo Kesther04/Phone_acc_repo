@@ -15,13 +15,9 @@
 <body>
 
     <section id="total-div">
-   <?php 
+   <?php
+        $sess = $_SESSION['USER']; 
         require("../nav_units/account_header.php");
-        
-        require("../dashboard/class/sel_class.php");
-    
-        $sel_ob = new SEL();  
-        $sess = $_SESSION['USER'];
 
         require("auto_cart_del.php");
     ?>

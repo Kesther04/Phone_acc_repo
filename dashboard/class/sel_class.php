@@ -193,6 +193,15 @@ class  SEL
 
         return $select;
     }
+
+    
+    public function sel_cart_sup_no($sess){
+        require("d_con/database_connection.php");
+        
+        $select = $con->query(" SELECT *,SUM(item_no) FROM cart_table WHERE session = '$sess' ");
+
+        return $select;
+    }
     
     public function sel_lk_tb($pt,$pid){
         require("d_con/database_connection.php");

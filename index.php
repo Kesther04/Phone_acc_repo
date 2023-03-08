@@ -15,11 +15,12 @@
 </head>
 <body>
 <section id="total-div">
-<?php 
+<?php
+  $sess = $_SESSION['USER']; 
   require("nav_units/header.php");
-  require("dashboard/class/sel_class.php");   
-  $sel_ob = new SEL();
-  $sess = $_SESSION['USER'];
+  
+ 
+  
 
   require("auto_cart_del.php");
 
@@ -161,14 +162,25 @@
             $sel_cart = $sel_ob->sel_cart_id($id,$sess);
             if ($sel_cart->num_rows > 0) {
             ?>
-            <div class="carted-div"><button>Added to Cart</button> </div>
+          </form>
+            <div class="carted-div">
+              <button>Added to Cart</button> 
+            </div>
+          
+
+            <div style="border:1px solid red;right:0px;top:0px;background:white;width: 100px;height:auto;">
+            <button>Add More Products</button>    
+            </div>
+            
             <?php }elseif ($row['close_stock'] == 0) { ?>
               <div class="cartful-div"><button disabled>Out of Stock</button> </div>
-           <?php  }else{ ?>
+          </form>
+              <?php  }else{ ?>
             <div class="cart-div"><button>Add to Cart</button> </div>
+          </form>
             <?php } ?>
             
-          </form>
+          
             
           
        <?php }else { ?>

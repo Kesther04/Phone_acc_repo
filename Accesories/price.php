@@ -2,12 +2,12 @@
 <div class='snd-inner-fst-purchase-div '>
 <form id="cart-form" class="cart-form" action="../../cart/backend_cart.php" method="post">
 <?php 
-    require("../../dashboard/class/sel_class.php");
+    
 
     $pageName = basename($_SERVER['PHP_SELF']);   
     $nt = str_replace('.php','', $pageName);
 
-    $sel_ob = new SEL();
+    
     $sess = $_SESSION['USER'];
     require("../auto_cart_del.php");
     

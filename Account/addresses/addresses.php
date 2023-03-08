@@ -42,8 +42,7 @@
             <div>
                 <h4>Billing address</h4>
                 <?php
-                    require("../../dashboard/class/sel_class.php");
-                    $sel_ob = new SEL();
+                    
                     $id = $_SESSION['id'];
                     $sel_con = $sel_ob->sel_acc_chg($id);
                     if ($sel_con) {

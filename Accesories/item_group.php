@@ -1,4 +1,4 @@
-<?php require("../../session.php"); ?>
+
 <section class="snd-sec-div snd-sec-margin">
     <div class="acce-div">
       <h1><?php echo $din; ?></h1>
@@ -6,8 +6,6 @@
     
     <div class="snd-snd">
       <?php 
-        require("../../dashboard/class/sel_class.php");   
-        $sel_ob = new SEL();
         $sess = $_SESSION['USER'];
         require("../auto_cart_del.php");
     
