@@ -452,7 +452,7 @@ header div{
 }
 
 
-.cart-div:hover{
+.cart-div:hover {
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -562,7 +562,7 @@ header div{
 }
 
 
-.cart-div button:hover{
+.cart-div:hover >button {
     color:white;
     background: none;
     border:1px solid  #098fad;
@@ -572,12 +572,12 @@ header div{
 }
 
 
-.carted-div button:hover{
+.carted-div:hover >button{
     border:1px solid  #329b1b;
 }
 
 
-.cartful-div button:hover{
+.cartful-div:hover > button{
     color:white;
     background: none;
     border:1px solid   #8f890e;
