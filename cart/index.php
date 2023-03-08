@@ -34,7 +34,7 @@
         ?>
             <p>"<?php echo str_replace('-',' ',$row['item_name']); ?>" has been added to your cart</p> 
         <?php  } } ?>
-            <span><a href="../index.php" target="blank">Continue shopping</a></span>
+            <span><a href="../" target="blank">Continue shopping</a></span>
         </div>
         <h1>Your Shopping Cart Summary</h1>
         <form class="cartal-form" action="backend_del_all.php" method="post">
