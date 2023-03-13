@@ -22,4 +22,16 @@ $(document).ready(function () {
         sh.slideToggle(1000).css({'display':'block'});
         $('#sh-shp').css({'display':'none'});
     })
+
+    var onl = $(".onl-pay");
+    var bnk = $(".bnk-pay");
+
+    $('.onl-trans').click(function () {
+        onl.css({'visibility':'visible'});
+    });
+
+
+    $('.bnk-trans').click(function () {
+        bnk.css({'visibility':'visible'});
+    });
 })

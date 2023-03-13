@@ -490,6 +490,7 @@ header div{
 .mid-ctd-div{
     font-size: 16px;
     padding:10px;
+    
 }
 
 .carted-div:hover{
@@ -885,6 +886,70 @@ footer{
     background: #A7A7A7;
     padding:10px;
     margin:20px 0px;
+}
+
+.inner-pay-mtd{
+    background: rgba(100, 99, 99,0.5);
+    width:100%;
+    position: fixed;top:0px;left:0px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:20;
+    
+}
+
+.onl-pay{
+    visibility: hidden;
+}
+
+.bnk-pay{
+    visibility: hidden;
+}
+
+.inner-pay-onl{
+    background:white;
+    position: absolute;
+    padding:30px;
+    font-weight: bold;
+}
+
+
+.pay-btn{
+    width:100%;
+    text-align:center;
+}
+
+
+.inner-pay-onl h1{
+    text-align: center;
+}
+
+.inner-pay-onl table tr td{
+    padding:20px;
+    width:100%;
+    position: relative;
+}
+
+.inner-pay-onl table tr td span{
+    width:100%;
+    float: left;
+}
+
+.inner-pay-onl table tr td input{
+    padding:10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.inner-pay-onl table tr td input:focus{
+    outline:none;
+}
+
+.inner-pay-onl table tr td .pay-naira{
+    position:absolute;
+    padding:10px 5px;
+    width:5%;
 }
 
 .acc-dit{

@@ -151,7 +151,7 @@
                     
                 ?>
             </p>
-            <p><button>Proceed to checkout</button></p>
+            <p><button><a href="../Account/pay_mtd/payment_mtd.php">Proceed to checkout</a></button></p>
         </div>
         <?php } } ?>
        

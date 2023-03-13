@@ -1,8 +1,11 @@
 <?php 
-    session_start();
+   require("../../session.php");    
     if(!isset($_SESSION['id'])){
         header('location:../../enter_account/login.php');
     }
+    require("../../dashboard/class/sel_class.php");
+    $sel_ob = new SEL();
+    $sess = $_SESSION['USER'];
 ?>
 <header>
   <div class="logo-div">
@@ -22,9 +25,7 @@
 
   <div class="snd-header-unit">
     <?php 
-      require("../../dashboard/class/sel_class.php");
-      $sel_ob = new SEL();
-      $sess = $_SESSION['USER'];
+      
       $sel_cart_con = $sel_ob->sel_cart_sup_no($sess);
       if ($sel_cart_con) {
         $row = $sel_cart_con->fetch_assoc();
