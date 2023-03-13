@@ -68,10 +68,10 @@
             <td><?php echo $row['item_price']; ?></td>
             <?php
             if ($row['status_deliv'] == "PENDING") { ?>
-                <td style='color:#dfd623;'><?php echo $row['status_deliv']; ?></td>    
+                <td class="mile-ac"><?php echo $row['status_deliv']; ?></td>    
             <?php }
             elseif ($row['status_deliv'] == "DELIVERED") { ?>
-                <td ><?php echo $row['status_deliv']; ?></td>
+                <td class="mile-greac"><?php echo $row['status_deliv']; ?></td>
             <?php }?>
             
             <td><?php echo $row['date']; ?></td>

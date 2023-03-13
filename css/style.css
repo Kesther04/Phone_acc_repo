@@ -790,7 +790,7 @@ footer{
     height:auto;
     display: flex;
     flex-direction: column;
-    background: #D9D9D9;
+    background: #fdfdfd;
     margin:50px;
     margin-top: 150px;
 }
@@ -799,7 +799,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-bottom:1px solid gray;
+    border-bottom:1px solid rgb(223, 208, 208);
     padding:0px 60px;
     font-weight: bold;
     font-size: 18px;
@@ -813,7 +813,7 @@ footer{
     background: none;
     font-size: 18px;
     outline:none;
-    border: 1px solid #D9D9D9;
+    border: 1px solid  #fdfdfd;
     font-weight: bold;
 }
 
@@ -835,12 +835,12 @@ footer{
 }
 
 .ac-orders table tr:nth-child(1){
-    background: #FFE9DD;   
+    background: #23BDDF;
 }
 
 .ac-orders table tr:nth-child(1) td{
     padding:20px;
-    background: #FFE9DD;
+    background: #23BDDF;
 }
 
 .ac-orders table tr td{
@@ -849,11 +849,23 @@ footer{
     text-align: center;
 }
 
-
-
-.ac-orders table tr td:hover{
-    color:whitesmoke;
+.mile-ac{
+    color:#dfd623;
 }
+
+.ac-orders table tr .mile-ac:hover{
+    color:#eee30d;
+}
+
+
+.mile-greac{
+    color: #46df23;
+}
+
+.ac-orders table tr .mile-greac:hover{
+    color: #39f40f;
+}
+
 
 .list-adds{
     display: flex;
