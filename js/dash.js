@@ -34,4 +34,9 @@ $(document).ready(function () {
     $('.bnk-trans').click(function () {
         bnk.css({'visibility':'visible'});
     });
+
+    $('.inner-pay-mtd-back').click(function () {
+        onl.css({'visibility':'hidden'});
+        bnk.css({'visibility':'hidden'});
+    });
 })

@@ -494,7 +494,12 @@ $(document).ready(function(){
             processData:false,
             success: function(dat) {
                 $(".inner-pay-onl").css({'visibility':'visible','color':'blue','font-weight':'bold','text-tranform':'uppercase'});
-                $(".inner-pay-onl").html(dat);      
+                $(".inner-pay-onl").html(dat); 
+                $(".inner-pay-mtd-back").click(function () {
+                    $("#total-div").load("#total-div");      
+                });
+
+                
 
             }
             

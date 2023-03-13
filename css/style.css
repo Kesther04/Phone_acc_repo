@@ -952,6 +952,10 @@ footer{
     font-weight: bold;
 }
 
+.inner-pay-mtd-back{
+    position: absolute;top:120px;left:20px;
+    cursor: pointer;
+}
 
 .pay-btn{
     width:100%;

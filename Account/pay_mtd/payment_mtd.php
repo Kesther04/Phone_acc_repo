@@ -38,6 +38,7 @@
             </div>
 
             <div class="inner-pay-mtd onl-pay">
+                <div class="inner-pay-mtd-back" title="back to page"><img src="../../img/3ar.png" width="60"></div>
                 <?php  
                     $sel_cscon = $sel_ob->sel_carts($sess);
                     if ($sel_cscon) { 
@@ -97,6 +98,7 @@
             </div>
 
             <div class="inner-pay-mtd bnk-pay">
+                <div class="inner-pay-mtd-back" title="back to page"><img src="../../img/3ar.png" width="60" ></div>
                 <div class="inner-pay-onl">
                     <form action="" method="post">
 
