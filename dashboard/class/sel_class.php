@@ -210,6 +210,14 @@ class  SEL
 
         return $select;
     }
+
+    public function sel_sales($sess,$uid){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM sales_table WHERE session = '$sess' AND user_id = '$uid' ORDER BY(id)DESC ");
+
+        return $select;
+    }
 }
 
 

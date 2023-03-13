@@ -829,6 +829,31 @@ footer{
     padding:20px;
 }
 
+.ac-orders{
+    overflow: auto;
+    width:100%;
+}
+
+.ac-orders table tr:nth-child(1){
+    background: #FFE9DD;   
+}
+
+.ac-orders table tr:nth-child(1) td{
+    padding:20px;
+    background: #FFE9DD;
+}
+
+.ac-orders table tr td{
+    padding:10px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.ac-orders table tr td:hover{
+    color:whitesmoke;
+}
 
 .list-adds{
     display: flex;

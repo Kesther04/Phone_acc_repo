@@ -29,12 +29,72 @@
     </div>
 
     <div class="content-acc">
+    <?php  
+        $uid = $_SESSION['id'];
+    ?>
+    <?php
+        $sel_con_ordin = $sel_ob->sel_sales($sess,$uid);
+        if ($sel_con_ordin) {
 
-        <div class="orders">
-            <p>No order has been made yet.     <span style="float:right;"><a href="#">Browse Products</a></span></p>
+        if ($sel_con_ordin->fetch_assoc()) {
+            
+        
+    ?>
+
+    <?php
+        $sel_con_ord = $sel_ob->sel_sales($sess,$uid);
+        if ($sel_con_ord) {
+    ?>
+    <div class="ac-orders">
+    <table>
+
+    <tr>
+        <td></td>
+        <td>PRODUCT_NAME</td>
+        <td>PRODUCT_PRICE</td>
+        <td>PRODUCT_STATUS</td>
+        <td>DATE_ORDERED</td>
+        <td>DATE_TO_BE_DELIVERED</td>
+    </tr>
+    <?php
+        while ($row = $sel_con_ord->fetch_assoc()) {
+
+    ?>
 
     
+        <tr>
+            <td><img src="../../Accesories/img/<?php echo $row['item_img']; ?>" width="100"></td>
+            <td><?php echo str_replace('-',' ',$row['item_name']); ?></td>
+            <td><?php echo $row['item_price']; ?></td>
+            <?php
+            if ($row['status_deliv'] == "PENDING") { ?>
+                <td style='color:#dfd623;'><?php echo $row['status_deliv']; ?></td>    
+            <?php }
+            elseif ($row['status_deliv'] == "DELIVERED") { ?>
+                <td ><?php echo $row['status_deliv']; ?></td>
+            <?php }?>
+            
+            <td><?php echo $row['date']; ?></td>
+            <td><?php echo $row['arrive_date']; ?></td>
+        </tr>
+    
+
+        
+    <?php }  ?>
+
+    </table>
+    </div>
+    <?php } ?>
+
+    <?php }else { ?>
+        
+    
+        <div class="orders">
+            <p>No order has been made yet.     <span style="float:right;"><a href="#">Browse Products</a></span></p>
+    
         </div>
+    <?php } ?>
+    <?php } ?>
     </div>
 
 </section>
