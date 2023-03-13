@@ -482,7 +482,24 @@ $(document).ready(function(){
             
         });    
     });
+     
+    $(".paykl").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'backend_pay_mtd.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $(".inner-pay-onl").css({'visibility':'visible','color':'blue','font-weight':'bold','text-tranform':'uppercase'});
+                $(".inner-pay-onl").html(dat);      
 
+            }
+            
+        });    
+    });
     
 
 });

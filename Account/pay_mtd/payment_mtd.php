@@ -34,7 +34,7 @@
         <div class="pay-mtd">
             
             <div>
-                <button class="onl-trans">Online Transfer</button> 
+                <button class="onl-trans">Online Payment</button> 
             </div>
 
             <div class="inner-pay-mtd onl-pay">
@@ -46,7 +46,7 @@
                 ?>
 
                     <div class="inner-pay-onl">
-                        <form action="" method="post">
+                        <form class="paykl" action="backend_pay_mtd.php" method="post">
                         <h1>Payment</h1>
                         <table>
                             <tr>
@@ -65,10 +65,11 @@
 
                             <tr>
                                 <td>
-                                    <span>Date:</span><input type="text" name="date"  required >
+                                    <span>Date:</span><input type="text" name="date"  required>
                                 </td>
                                 <td>
                                     <span>CSV:</span><input type="number" name="csv" required>
+                                    <input type="hidden" name="userid" value="<?php echo $_SESSION['id'];?>" required readonly>
                                 </td>
                             </tr>
                         

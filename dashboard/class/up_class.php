@@ -43,6 +43,14 @@ class  UPD
 
         return $update;
     }
+
+    public function upd_item_tab($cstock,$id){
+        require("d_con/database_connection.php");
+
+        $update = $con->query("UPDATE item_table SET close_stock='$cstock' WHERE id ='$id' ");
+
+        return $update;
+    }
 }
 
 

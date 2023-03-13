@@ -55,7 +55,7 @@ class  SEL
     public function sel_nselacc(){
         require("d_con/database_connection.php");
 
-        $select = $con->query(" SELECT * FROM item_table  ORDER BY  RAND() LIMIT 4");
+        $select = $con->query(" SELECT * FROM item_table ORDER BY(id)DESC LIMIT 4");
 
         return $select;
     }

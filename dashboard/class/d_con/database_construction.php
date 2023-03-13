@@ -131,4 +131,29 @@ if ($likes_tb) {
 }else {
     echo "<p>7th table not created</p>";
 }
+
+
+$sales_tb = $con->query("CREATE TABLE if not exists sales_table
+(id int(100)not null primary key auto_increment,
+item_id int(100)not null,
+user_id int(100)not null,
+item_name varchar(150)not null,
+item_img varchar(150)not null,
+item_price varchar(150)not null,
+tot_item_prc varchar(150)not null,
+item_no varchar(150)not null,
+session varchar(50)not null,
+status_deliv varchar(100)not null,
+leave_date varchar(20)not null,
+arrive_date varchar(20)not null,
+deliv_time varchar(20)not null,
+date varchar(20)not null,
+time varchar(20)not null)ENGINE=innoDB");
+
+if ($cart_tb) {
+    echo "<p>8th table created</p>";
+}else {
+    echo "<p>8th table not created</p>";
+}
+
 ?>

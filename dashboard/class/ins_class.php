@@ -60,6 +60,14 @@ class  INS
 
         return $inse;
     }
+
+    public function ins_sales($item_id,$user_id,$it_name,$img,$price,$tot_price,$item_no,$sess,$stat,$leav_date,$arr_date,$deliv_time,$date,$time){
+        require("d_con/database_connection.php");
+
+        $inse = $con->query("INSERT INTO sales_table (item_id,user_id,item_name,item_img,item_price,tot_item_prc,item_no,session,status_deliv,leave_date,arrive_date,deliv_time,date,time)VALUE('$item_id','$user_id','$it_name','$img','$price','$tot_price','$item_no','$sess','$stat','$leav_date','$arr_date','$deliv_time','$date','$time')");
+
+        return $inse;
+    }
 }
 
 
