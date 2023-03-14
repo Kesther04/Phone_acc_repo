@@ -44,7 +44,7 @@
         <?php } ?>
 
         
-        <a href="../<?php echo $row['item_group'].'/'.$row['item_name']; ?>"><img src="../../Accesories/img/<?php echo $row['item_img']; ?>" class="main-img"></a>
+        <a href="../../Accesories/<?php echo $row['item_group'].'/'.$row['item_name']; ?>"><img src="../../Accesories/img/<?php echo $row['item_img']; ?>" class="main-img"></a>
       </div>
       <div class="inner-snd-snd-dis">
         <h3>
@@ -53,7 +53,7 @@
             $iname = str_replace('-',' ',$row['item_name']);
           
           ?>
-           <a href="../<?php echo $row['item_group'].'/'.$row['item_name']; ?>"><?php echo $iname;  ?></a>
+           <a href="../../Accesories/<?php echo $row['item_group'].'/'.$row['item_name']; ?>"><?php echo $iname;  ?></a>
         </h3>
         <?php  
         if ($row['dis_perc'] > 0) { ?>

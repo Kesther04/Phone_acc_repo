@@ -33,12 +33,24 @@
 
         <div class="pay-mtd">
             
-            <div>
-                <button class="onl-trans">Online Payment</button> 
+            <div class="fir-pay-mtd">
+                <h1>ONLINE PAYMENT</h1>
+                <button class="onl-trans">
+                    <img src="../../img/mcard.jpg" width="100">
+                    MASTER CARD
+                </button> 
+
+                <button class="onl-trans">
+                    <img src="../../img/visacard.jpg" width="100">
+                    VISA  PAYMENT
+                </button>
             </div>
 
             <div class="inner-pay-mtd onl-pay">
-                <div class="inner-pay-mtd-back" title="back to page"><img src="../../img/3ar.png" width="60"></div>
+                <div class="inner-pay-mtd-back" title="back to page">
+                    <img src="../../img/arro.svg" width="60" class="sec-img">
+                    <img src="../../img/arro-fill.svg" width="60" class="fir-img">
+                </div>
                 <?php  
                     $sel_cscon = $sel_ob->sel_carts($sess);
                     if ($sel_cscon) { 
@@ -93,12 +105,20 @@
                 <?php } ?>
             </div>
 
-            <div>
-                <button class="bnk-trans">Bank Transfer</button> 
+            <div class="sec-pay-mtd">
+                <h1>BANK TRANSFER</h1>
+                <button class="bnk-trans">
+                    <img src="../../img/2bank.png" width="100">
+                    BANK TRANSFER 
+                </button>
+                
             </div>
 
             <div class="inner-pay-mtd bnk-pay">
-                <div class="inner-pay-mtd-back" title="back to page"><img src="../../img/3ar.png" width="60" ></div>
+                <div class="inner-pay-mtd-back" title="back to page">
+                    <img src="../../img/arro.svg" width="60" class="sec-img">
+                    <img src="../../img/arro-fill.svg" width="60" class="fir-img">
+                </div>
                 <div class="inner-pay-onl">
                     <form action="" method="post">
 
@@ -118,7 +138,7 @@
     </div>
     </div>
 </section>
-
+;
 <?php require("../nav_units/account_footer.php");  ?>
 </section>
 </body>

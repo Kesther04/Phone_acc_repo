@@ -919,11 +919,6 @@ footer{
     padding:20px;
 }
 
-.pay-mtd button{
-    background: #A7A7A7;
-    padding:10px;
-    margin:20px 0px;
-}
 
 .inner-pay-mtd{
     background: rgba(100, 99, 99,0.5);
@@ -937,6 +932,59 @@ footer{
     
 }
 
+
+.pay-mtd{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.fir-pay-mtd{
+    width:45%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec-pay-mtd{
+    width:45%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fir-pay-mtd button,.sec-pay-mtd button{
+    background: rgb(243, 240, 240);
+    border:1px solid rgb(243, 240, 240);
+    outline: none;
+    transition: 0.7s ease-in;
+}
+
+
+.fir-pay-mtd button:hover,.sec-pay-mtd button:hover{
+    box-shadow: 0px 2px 5px 2px rgb(186, 192, 198);
+    border:1px solid lightgray;
+}
+
+.sec-img{
+    display: block;
+}
+
+.fir-img{
+    display: none;
+}
+
+
+.inner-pay-mtd-back:hover > .sec-img{
+    display: none;
+}
+
+.inner-pay-mtd-back:hover > .fir-img{
+    display: block;
+}
 .onl-pay{
     visibility: hidden;
 }
@@ -945,11 +993,32 @@ footer{
     visibility: hidden;
 }
 
+.onl-trans{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin:20px 0px;
+    padding:10px;
+}
+
+
+.bnk-trans{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin:20px 0px;
+}
+
 .inner-pay-onl{
     background:white;
     position: absolute;
     padding:30px;
     font-weight: bold;
+    
 }
 
 .inner-pay-mtd-back{
@@ -1039,8 +1108,15 @@ footer{
     width:100%;
     background: none;
     padding:10px;
+    border:1px solid lightgray;
+    transition: 0.5s ease-in;
 }
 
+
+.acc-det table tr td input:hover{
+    box-shadow: 0px 2px 5px 2px rgb(186, 192, 198);
+    
+}
 
 .acc-det button{
     background: #A7A7A7;

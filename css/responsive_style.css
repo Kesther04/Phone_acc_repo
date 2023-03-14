@@ -175,6 +175,29 @@
         padding: 10px;
         width:100px;
     }
+
+    .pay-mtd{
+        width:100%;
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .fir-pay-mtd{
+        width:auto;
+        padding:20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sec-pay-mtd{
+        width:auto;
+        padding:20px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
