@@ -34,6 +34,15 @@ class  SEL
 
         return $select;
     }    
+
+    
+    public function sel_all_user(){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM user_table ORDER BY(id) DESC ");
+
+        return $select;
+    }    
         
     public function sel_nt($nt,$group){
         require("d_con/database_connection.php");
@@ -215,6 +224,41 @@ class  SEL
         require("d_con/database_connection.php");
 
         $select = $con->query(" SELECT * FROM sales_table WHERE session = '$sess' AND user_id = '$uid' ORDER BY(id)DESC ");
+
+        return $select;
+    }
+
+    
+    public function sel_all_sales($uid){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM sales_table WHERE user_id='$uid' ORDER BY(id)DESC  ");
+
+        return $select;
+    }
+
+    
+    public function sel_all_saledate($uid){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM sales_table WHERE user_id='$uid' GROUP BY(date)ASC  ");
+
+        return $select;
+    }
+
+    
+    public function sel_sales_date($uid,$date){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM sales_table WHERE user_id='$uid' AND date='$date' ORDER BY(id)DESC  ");
+
+        return $select;
+    }
+    
+    public function sel_sales_all($uid){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM sales_table WHERE user_id='$uid' ORDER BY(id)DESC  ");
 
         return $select;
     }

@@ -116,8 +116,10 @@
 
             <div class="inner-pay-mtd bnk-pay">
                 <div class="inner-pay-mtd-back" title="back to page">
+
                     <img src="../../img/arro.svg" width="60" class="sec-img">
                     <img src="../../img/arro-fill.svg" width="60" class="fir-img">
+                    
                 </div>
                 <div class="inner-pay-onl">
                     <form action="" method="post">

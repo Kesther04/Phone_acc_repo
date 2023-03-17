@@ -53,6 +53,14 @@
             </a>
         </div>
         <div class="dash-b">
+            <a href="../view_user/view_user.php">
+                <span>
+                <img src="../../../img/user-fill.svg"  class="fir-img"><img src="../../../img/user.svg" class="sec-img" >
+                VIEW REGISTERED USERS
+                </span>
+            </a>
+        </div>
+        <div class="dash-b">
            
                 
             <button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='../../login/login.php';}">

@@ -61,8 +61,9 @@
     .msg{
         width:100%;
         height:100%;
-        padding:50px;
+        padding:20px;
         border-radius: 10px;
+        overflow: auto;
     }
 
     
@@ -72,6 +73,25 @@
         padding:50px;
         border-radius: 10px;
     }
+
+    .con-mat{
+        visibility: hidden;
+        width:auto;
+        height:50px;
+        background:whitesmoke;
+        border-radius: 20px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+
+    .gen-feat-div{
+        height:300px;
+        overflow: auto;
+    }
+
     
 }
 
@@ -165,5 +185,10 @@
         height:500px;
         padding:50px;
         border-radius: 10px;
+    }
+
+    .gen-feat-div{
+        height:400px;
+        overflow: auto;
     }
 }

@@ -18,16 +18,17 @@
 
 <section class="main-div-container">
 
-    
-
-
-<form  class="news_upl" action="backend_item_upload.php" method="post" enctype="multipart/form-data">
     <div id="masag">
         <div class="msg">    
             <div class="msa"></div>
             <button class="aj-btn"><a href="item_upload.php" title="return to item upload page">COMPLETE</a></button>
         </div>
     </div>
+    
+
+
+<form  class="news_upl" action="backend_item_upload.php" method="post" enctype="multipart/form-data">
+    
 
 <div class="sec-div-container">
 
