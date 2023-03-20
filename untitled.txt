@@ -1,7 +1,0 @@
-  payment
-
-  amount:
-
-  date:      csv: 
-
-  pay
