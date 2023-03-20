@@ -509,29 +509,6 @@ $(document).ready(function(){
     $(".vud").submit(function(e){
         e.preventDefault();
         $.ajax({
-            url:'view_user_date.php',
-            type:'post',
-            data:new FormData(this),
-            cache:false,
-            contentType:false,
-            processData:false,
-            success: function(dat) {
-                $("#masag-cot").fadeIn(700).css({'visibility':'visible'});
-                $(".inner-msgas-cot").html(dat);   
-                $(".inner-masag-cot-back").click(function () {
-                    $("#masag-cot").fadeOut(700).css({'visibility':'hidden'});
-                    $(".snd-inner-masag-ct").css({'visibility':'hidden'});
-                })  
-                
-
-            }
-            
-        });    
-    });
-
-    $(".bvu").submit(function(e){
-        e.preventDefault();
-        $.ajax({
             url:'backend_view_user.php',
             type:'post',
             data:new FormData(this),
@@ -539,8 +516,14 @@ $(document).ready(function(){
             contentType:false,
             processData:false,
             success: function(dat) {
+                $("#masag-cot").fadeIn(700).css({'visibility':'visible'});  
                 $(".snd-inner-masag-ct").fadeIn(700).css({'visibility':'visible'});
-                $(".msg").html(dat);
+                $(".msg").html(dat); 
+                $(".inner-masag-cot-back").click(function () {
+                    $("#masag-cot").fadeOut(700).css({'visibility':'hidden'});
+                })  
+                
+
             }
             
         });    

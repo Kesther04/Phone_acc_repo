@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css" media="all">
     <link rel="stylesheet" href="../../css/responsive_style.css" media="all">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <script src="../../js/jquery.js"></script>
     <script src="../../js/header_move.js"></script>
     <script src="../../js/ajax.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            new DataTable('.myTable');
+        })
+    </script>
     <title>ACCOUNT</title>
 </head>
 <body>
@@ -46,16 +54,19 @@
         if ($sel_con_ord) {
     ?>
     <div class="ac-orders">
-    <table>
-
-    <tr>
-        <td></td>
-        <td>PRODUCT_NAME</td>
-        <td>PRODUCT_PRICE</td>
-        <td>PRODUCT_STATUS</td>
-        <td>DATE_ORDERED</td>
-        <td>DATE_TO_BE_DELIVERED</td>
+    <table class="myTable">
+    <thead>
+    <tr id="fst-tabac">
+        <th></th>
+        <th>PRODUCT_NAME</th>
+        <th>PRODUCT_PRICE</th>
+        <th>PRODUCT_STATUS</th>
+        <th>DATE_ORDERED</th>
+        <th>DATE_TO_BE_DELIVERED</th>
     </tr>
+    </thead>
+    
+    <tbody>
     <?php
         while ($row = $sel_con_ord->fetch_assoc()) {
 
@@ -81,6 +92,7 @@
 
         
     <?php }  ?>
+    </tbody>
 
     </table>
     </div>

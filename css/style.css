@@ -822,6 +822,7 @@ footer{
     flex-direction: column;
     justify-content: space-around;
     padding:60px 130px;
+    height:auto;
 }
 
 .orders{
@@ -830,15 +831,19 @@ footer{
 }
 
 .ac-orders{
-    overflow: auto;
     width:100%;
+    height: auto;
 }
 
-.ac-orders table tr:nth-child(1){
+.ac-orders .myTable{
+    overflow: hidden;
+}
+
+.ac-orders table #fst-tabac{
     background: #23BDDF;
 }
 
-.ac-orders table tr:nth-child(1) td{
+.ac-orders table #fst-tabac th{
     padding:20px;
     background: #23BDDF;
 }

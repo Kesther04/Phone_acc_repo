@@ -56,7 +56,7 @@
             <a href="../view_user/view_user.php">
                 <span>
                 <img src="../../../img/user-fill.svg"  class="fir-img"><img src="../../../img/user.svg" class="sec-img" >
-                VIEW REGISTERED USERS
+                REGISTERED USERS
                 </span>
             </a>
         </div>

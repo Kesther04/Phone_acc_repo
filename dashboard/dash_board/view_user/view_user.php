@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/item_upload.css" media="all">
     <link rel="stylesheet" href="../../../css/dash_css_rep.css" media="all">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <script src="../../../js/jquery.js"></script>
     <script src="../../../js/ajax.js"></script>
     <script src="../../../js/metro.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            new DataTable('.myTable');
+        })
+    </script>
     <title>DASHBOARD</title>
     
 </head>
@@ -18,14 +26,6 @@
 
 
 <div id="masag-cot">
-    <div class="inner-masag-ct">
-        <div class="msgas-cot">
-            <div class="inner-masag-cot-back" title="back to page">
-            <img src="../../../img/arro.svg" width="30" class="sec-img"><img src="../../../img/arro-fill.svg" width="30" class="fir-img">
-            </div>
-            <div class="inner-msgas-cot"></div>
-        </div>
-    </div>
 
     <div class="snd-inner-masag-ct">
         <div class="msg"></div>
@@ -45,16 +45,19 @@
 
     <div class="sec-div-container">
         <div class="line-div-container">
-            <table>
-                <tr id="top-line-div-table">
-                    <td>USERNAME</td>
-                    <td>EMAIL</td>
-                    <td>GENERAL_STATUS_ORDERS</td>
-                    <td>VIEW_USER_ORDERS</td>
-                </tr>
-                <?php
-                    while ($row = $sel_con->fetch_assoc()) {
-                ?>
+            
+            <table class="myTable" >
+                <thead>
+                    <tr id="top-line-div-table">
+                        <th>USERNAME</th>
+                        <th>EMAIL</th>
+                        <th>GENERAL_STATUS_ORDERS</th>
+                        <th>VIEW_USER_ORDERS</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                <?php while ($row = $sel_con->fetch_assoc()) { ?>
                 <tr>
                     <td><?php echo $row['fullname']; ?></td>
                     <td><?php echo $row['email']; ?></td>
@@ -74,7 +77,7 @@
                         ?>
                     </td>
                     <td>
-                        <form class="vud" action="view_user_date.php" method="post">
+                        <form class="vud" action="backend_view_user.php" method="post">
                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required readonly>
                             <input type="hidden" name="fnm" value="<?php echo $row['fullname']; ?>" required readonly>
                             <button class="conlin-btn">VIEW USER ORDERS</button>
@@ -82,6 +85,8 @@
                     </td>
                 </tr>
                 <?php  } ?>
+                
+                </tbody>
             </table>
         </div>
     </div>
