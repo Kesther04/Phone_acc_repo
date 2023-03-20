@@ -836,20 +836,23 @@ footer{
 }
 
 .ac-orders .myTable{
-    overflow: hidden;
+    width:100%;
 }
 
 .ac-orders table #fst-tabac{
     background: #23BDDF;
+    
 }
 
 .ac-orders table #fst-tabac th{
-    padding:20px;
+    padding:20px 10px;
     background: #23BDDF;
+    color: whitesmoke;
+    text-align: center;
 }
 
 .ac-orders table tr td{
-    padding:10px 20px;
+    padding:20px 10px;
     font-weight: bold;
     text-align: center;
 }

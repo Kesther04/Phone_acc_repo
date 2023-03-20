@@ -54,7 +54,7 @@
         if ($sel_con_ord) {
     ?>
     <div class="ac-orders">
-    <table class="myTable">
+    <table class="myTable display">
     <thead>
     <tr id="fst-tabac">
         <th></th>
