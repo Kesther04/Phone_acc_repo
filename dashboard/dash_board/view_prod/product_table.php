@@ -57,7 +57,7 @@
                         <th>SELLING_PRICE</th>
                         <th>TOTAL_AMOUNT</th>
                         <th>PROFIT</th>
-                        <th>DATE</th>
+                        <th>DATE_ADDED</th>
                         <th>VIEW_OTHER_DETAILS</th>
                     </tr>
                 </thead>
