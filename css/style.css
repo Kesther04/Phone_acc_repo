@@ -263,19 +263,19 @@ header div{
 }
 
 
-.prev,.next{
+.container .prev,.container .next{
     float: left;
     margin-top: 200px;
     cursor: pointer;
 }
 
-.prev{
+.container .prev{
     position: absolute;
     margin-left:1%;
     z-index: 1;
 }
 
-.next{
+.container .next{
     position: absolute;
     margin-left:90%;
     float: right;
@@ -841,7 +841,6 @@ footer{
 
 .ac-orders table #fst-tabac{
     background: #23BDDF;
-    
 }
 
 .ac-orders table #fst-tabac th{

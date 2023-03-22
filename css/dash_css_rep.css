@@ -1,4 +1,4 @@
-@media(max-width:850px){
+@media(max-width:880px){
 
 
 
@@ -92,7 +92,25 @@
         overflow: auto;
     }
 
+    .inner-fdi{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-sdi{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }   
+
+    .thr-dis-itm{
+        margin:20px 0px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     
+    }
 }
 
 

@@ -528,4 +528,27 @@ $(document).ready(function(){
             
         });    
     });
+
+    $(".vud").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'product_fields.php',
+            type:'post',
+            data:new FormData(this),
+            cache:false,
+            contentType:false,
+            processData:false,
+            success: function(dat) {
+                $("#masag-cot").fadeIn(700).css({'visibility':'visible'});  
+                $(".snd-inner-masag-ct").fadeIn(700).css({'visibility':'visible'});
+                $(".msg").html(dat); 
+                $(".inner-masag-cot-back").click(function () {
+                    $("#masag-cot").fadeOut(700).css({'visibility':'hidden'});
+                })  
+                
+
+            }
+            
+        });    
+    });
 });

@@ -140,7 +140,7 @@
     </div>
     </div>
 </section>
-;
+
 <?php require("../nav_units/account_footer.php");  ?>
 </section>
 </body>

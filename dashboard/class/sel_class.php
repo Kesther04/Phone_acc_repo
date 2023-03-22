@@ -238,6 +238,31 @@ class  SEL
     }
 
     
+    public function sel_all_item(){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM item_table ORDER BY(id)DESC  ");
+
+        return $select;
+    }
+    
+    public function sel_all_tot_itm($id){
+        require("d_con/database_connection.php");
+
+        $select = $con->query("SELECT *, SUM(item_price), SUM(item_no) FROM sales_table WHERE item_id='$id'");
+
+        return $select;
+    }
+
+    public function sel_all_dat_itm($id,$date){
+        require("d_con/database_connection.php");
+
+        $select = $con->query("SELECT *, SUM(item_price), SUM(item_no) FROM sales_table WHERE item_id='$id' AND date='$date'");
+
+        return $select;
+    }
+
+    
     public function sel_all_saledate($uid){
         require("d_con/database_connection.php");
 

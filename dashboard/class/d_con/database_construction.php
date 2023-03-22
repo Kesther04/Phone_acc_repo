@@ -150,7 +150,7 @@ deliv_time varchar(20)not null,
 date varchar(20)not null,
 time varchar(20)not null)ENGINE=innoDB");
 
-if ($cart_tb) {
+if ($sales_tb) {
     echo "<p>8th table created</p>";
 }else {
     echo "<p>8th table not created</p>";
