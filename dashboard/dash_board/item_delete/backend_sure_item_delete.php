@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $del_con = $del_ob->del_item($id);
     if ($del_con) {
        
-        $ins_con = $ins_ob->ins_item_del($iname,$img,$igroup,$icost,$iprice,$idprc,$istock,$cstock,$likes,$date,$time);
+        $ins_con = $ins_ob->ins_item_del($id,$iname,$img,$igroup,$icost,$iprice,$idprc,$istock,$cstock,$likes,$date,$time);
         if ($ins_con) {
             header("location:../item_upload/item_upload.php");     
         }else {

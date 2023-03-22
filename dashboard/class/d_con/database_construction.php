@@ -82,6 +82,7 @@ if ($user_tb) {
 
 $del_tb = $con->query("CREATE TABLE if not exists del_table
 (id int(100)not null primary key auto_increment,
+item_id int(100)not null,
 item_name varchar(150)not null,
 item_img varchar(150)not null,
 item_group varchar(150)not null,
