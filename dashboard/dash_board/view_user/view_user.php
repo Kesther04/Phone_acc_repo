@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<?php require("../../admin_dashboard_layout.php"); ?>
+<?php require("../../admin_dashboard_layout.php"); ?> 
 
 
 <div id="masag-cot">

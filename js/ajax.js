@@ -30,7 +30,7 @@ $(document).ready(function(){
             success: function(dat) {
                 $("#masag").css({'visibility':'visible'});
                 $(".msa").html(dat);            
-
+                
             }
             
         });    
@@ -552,6 +552,4 @@ $(document).ready(function(){
         });    
     });
 
-    
-   
 });
