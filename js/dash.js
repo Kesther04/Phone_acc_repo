@@ -9,6 +9,8 @@ $(document).ready(function () {
         md.slideUp(1000).css({'visibility':'hidden'});
     })
 
+    $(".main-div-container").css({'opacity':'0','animation':'con-load var(--after-fs-load-time) ease-in var(--nav-load-time)','animation-fill-mode': 'forwards','transform': 'translateY(-20px)'});
+
     var b = $(".bil");
     var sh = $(".shp");
 

@@ -16,14 +16,16 @@
 
 <?php require("../../admin_dashboard_layout.php"); ?>
 
-<section class="main-div-container">
-
-    <div id="masag">
+<div id="masag">
         <div class="msg">    
             <div class="msa"></div>
             <button class="aj-btn"><a href="item_upload.php" title="return to item upload page">COMPLETE</a></button>
         </div>
-    </div>
+</div>
+
+<section class="main-div-container">
+
+    
     
 
 

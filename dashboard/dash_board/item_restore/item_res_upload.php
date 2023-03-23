@@ -12,20 +12,6 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         while ($row = $sel_dis->fetch_assoc()) {
 ?>
 
-<div id="masag">
-        <div class="msgas">    
-            
-            <div style="font-weight:bold;"><p>ARE YOU SURE YOU WANT TO RESTORE THIS ITEM DETAILS</p></div>
-            <div class="inner-secdc">
-            <form action="backend_sure_item_restore.php" method="post">
-                <div class="msa"></div>
-                <button class="aj-btn">Yes</button>
-            </form>
-            <button class="aj-btn"><a href="item_restore.php">No</a></button>
-            </div>
-        </div>
-</div>
-
 <form class="news_upl" action="backend_item_restore.php" method="post" enctype="multipart/form-data">
     
 

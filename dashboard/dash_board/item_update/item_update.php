@@ -20,6 +20,13 @@
     $sel_ob = new SEL();
 ?>
 
+    <div id="masag">
+        <div class="msg">    
+            <div class="msa"></div>
+            <button class="aj-btn"><a href="item_update.php" title="return to item update page">COMPLETE</a></button>
+        </div>
+    </div>
+
 <section class="main-div-container">
 
     
