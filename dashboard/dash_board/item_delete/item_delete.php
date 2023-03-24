@@ -49,7 +49,7 @@
                 <tr>
                 <td>
                     <span>Product Group</span>
-                    <select name="igroup" required>
+                    <select name="igroup" class="con-btnn" required>
                         <option></option>
                             <?php
                                 

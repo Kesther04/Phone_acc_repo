@@ -1030,14 +1030,14 @@ footer{
 
 .inner-pay-mtd{
     background: rgba(100, 99, 99,0.5);
-    width:100%;
+    width:100% ;
     position: fixed;top:0px;left:0px;
     height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:20;
-    transform: translateY(0);
+    z-index:50;
+    border:1px solid red;
 }
 
 

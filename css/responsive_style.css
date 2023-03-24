@@ -128,7 +128,7 @@
         width:100%;
         display: flex;
         visibility: hidden;
-        position: absolute;top:0px;left:0px;
+        position:fixed;top:0px;left:0px;
         background: #23BDDF;
         height:300px;
         overflow: auto;

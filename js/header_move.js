@@ -28,6 +28,7 @@ $(document).ready(function(){
     
         $(".container").css({'opacity':'0','animation':'con-load var(--after-fs-load-time) ease-in calc(var(--nav-load-time) + 200ms)','animation-fill-mode': 'forwards','transform': 'translateY(-20px)'});
 
+        $(".dashboard").css({'opacity':'0','animation':'con-load var(--after-fs-load-time) ease-in calc(var(--nav-load-time) + 200ms)','animation-fill-mode': 'forwards','transform': 'translateY(-20px)'});
         
     
         $(".fst-snd").css({'opacity':'0','animation':'fst-snd-load var(--after-fs-load-time) ease-in calc(var(--nav-load-time) + 200ms)','animation-fill-mode': 'forwards','transform': 'translateY(-20px)'});
