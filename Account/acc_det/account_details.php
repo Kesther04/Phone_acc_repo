@@ -24,7 +24,7 @@
         <div><a href="../order/order.php">Orders</a></div>
         <div><a href="../addresses/addresses.php">Addresses</a></div>
         <div><a href="../pay_mtd/payment_mtd.php">Payment Methods</a></div>
-        <div class="login"><a href="../acc_det/account_details.php">Account Details</a></div>
+        <div><a href="../acc_det/account_details.php" class="active">Account Details</a></div>
         <div><button onclick="if(window.confirm('ARE YOU SURE YOU WANT TO LOG OUT')){window.location='../../enter_account/login.php';}">Logout</button></div>
     </div>
 

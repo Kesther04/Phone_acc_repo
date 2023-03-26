@@ -29,7 +29,7 @@
     <div class="dashboard">
         <div class="close-dash">&times;</div>
         <div><a href="../dashboard/dashboard.php">Dashboard</a></div>
-        <div class="login"><a href="../order/order.php">Orders</a></div>
+        <div><a href="../order/order.php" class="active">Orders</a></div>
         <div><a href="../addresses/addresses.php">Addresses</a></div>
         <div><a href="../pay_mtd/payment_mtd.php">Payment Methods</a></div>
         <div><a href="../acc_det/account_details.php">Account Details</a></div>

@@ -18,9 +18,9 @@
 <section class="account-div">
 
     <div class="open-dash">&#9776;</div>
-    <div class="dashboard">
+    <div class="dashboard" data-slide="right">
         <div class="close-dash">&times;</div>
-        <div class="login"><a href="../dashboard/dashboard.php">Dashboard</a></div>
+        <div ><a href="../dashboard/dashboard.php" class="active">Dashboard</a></div>
         <div><a href="../order/order.php">Orders</a></div>
         <div><a href="../addresses/addresses.php">Addresses</a></div>
         <div><a href="../pay_mtd/payment_mtd.php">Payment Methods</a></div>

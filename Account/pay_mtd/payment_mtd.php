@@ -24,7 +24,7 @@
         <div><a href="../dashboard/dashboard.php">Dashboard</a></div>
         <div><a href="../order/order.php">Orders</a></div>
         <div><a href="../addresses/addresses.php">Addresses</a></div>
-        <div class="login"><a href="../pay_mtd/payment_mtd.php">Payment Methods</a></div>
+        <div><a href="../pay_mtd/payment_mtd.php" class="active">Payment Methods</a></div>
         <div><a href="../acc_det/account_details.php">Account Details</a></div>
         <div><button onclick="if(window.confirm('ARE YOU SURE YOU WANT TO LOG OUT')){window.location='../../enter_account/login.php';}">Logout</button></div>
     </div>

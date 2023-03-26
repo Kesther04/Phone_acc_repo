@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    --nav-load-time:300ms;
 }
 
 .login-sec{
@@ -22,7 +23,22 @@ body{
     align-items: center;
     padding:30px;
     margin:100px;
-    
+    animation:nav-load var(--nav-load-time) ease-in ;
+}
+
+
+@keyframes nav-load{
+    0%{
+        transform: scale(0);
+    }
+
+    90%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
 }
 
 .msg-log{

@@ -21,7 +21,6 @@ $(document).ready(function(){
     headermove();
     function headermove() {
         
-    
         $(".first-sec-div").css({'opacity':'0','animation':'first-sec-load var(--first-sec-load-time) ease-in var(--nav-load-time)','animation-fill-mode': 'forwards','transform': 'scale(0)'});
     
         $(".after-fs-div").css({'animation':'after-fs-load var(--after-fs-load-time) ease-in var(--nav-load-time)','animation-fill-mode': 'forwards','transform': 'scale(0)'});
@@ -49,5 +48,7 @@ $(document).ready(function(){
     
         $("footer").css({'opacity':'0','animation':'snd-sec-load var(--after-fs-load-time) ease-in calc(var(--nav-load-time) + 200ms)','animation-fill-mode': 'forwards','transform': 'translateY(-20px)'});
     }
+
+    
 });
 

@@ -899,15 +899,25 @@ footer{
 .dashboard{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     border-bottom:1px solid rgb(223, 208, 208);
-    padding:0px 60px;
+    padding:20px 60px;
     font-weight: bold;
     font-size: 18px;
+    
 }
 
-.dashboard div{
-    padding:20px 0px;
+
+.dashboard div a{
+    padding:20px 50px;
+}
+
+.dashboard div a:hover{
+    border-bottom: 4px solid rgb(100, 99, 99);
+}
+
+
+.dashboard div a.active{
+    border-bottom: 4px solid rgb(36, 68, 37);
 }
 
 .dashboard button{
@@ -916,6 +926,8 @@ footer{
     outline:none;
     border: 1px solid  #fdfdfd;
     font-weight: bold;
+    padding:0px 50px;
+    margin:0px;
 }
 
 .content-acc{
@@ -1037,7 +1049,6 @@ footer{
     justify-content: center;
     align-items: center;
     z-index:50;
-    border:1px solid red;
 }
 
 
@@ -1126,7 +1137,6 @@ footer{
     position: absolute;
     padding:30px;
     font-weight: bold;
-    
 }
 
 .inner-pay-mtd-back{

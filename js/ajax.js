@@ -209,7 +209,12 @@ $(document).ready(function(){
             processData:false,
             success: function(dat) {
                 $("#total-div").load("#total-div");      
-
+                
+                // setInterval($('.mid-ctd-div').load('cart/backend_delup_cart.php',function () {
+                //     $('.mid-ctd-div').html(dat);
+                //     $(".mid-ctd-div").load(".mid-ctd-div");
+                // }),100);
+                  
             }
             
         });    
@@ -245,6 +250,7 @@ $(document).ready(function(){
             success: function(dat) {
                 $("#total-div").load("#total-div");      
 
+                
             }
             
         });    
@@ -301,6 +307,9 @@ $(document).ready(function(){
                         $(".dis-like").html(dat);   
       
                     })
+
+                    
+                
                 
             }
             

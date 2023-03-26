@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         
         $up_con = $up_ob->upd_cart_tb($dprice,$dio,$id,$item_id,$sess);
             if ($up_con) {
-                echo "cart updated successfully";
+                echo $dio;
             }else {
                 echo "not updated";
             }

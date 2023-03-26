@@ -94,7 +94,7 @@
 
        <?php }else { echo ""; } ?>
 
-       <div class="dis-like"><?php echo $liket = $row['likes']; ?></div>
+       <div class="dis-like" id="disli"><?php echo $liket = $row['likes']; ?></div>
 
         <?php 
           $sel_lk_tb = $sel_ob->sel_pt_lk_tb($pana,$sess);
@@ -170,7 +170,8 @@
             <div class="carted-div"><button>-</button></div>
             </form>
             
-            <div class="mid-ctd-div"><?php echo $dow['item_no']; ?></div>
+            <div class="mid-ctd-div" id="mid-gad"><?php echo $dow['item_no']; ?></div>
+            
             <form class="cart-map-for" action="cart/backend_up_cart.php" method="post">
             <input type="hidden" name="id" value="<?php echo $dow['id']; ?>" readonly required>
             <input type="hidden" name="item_id" value="<?php echo $dow['item_id']; ?>" readonly required>
