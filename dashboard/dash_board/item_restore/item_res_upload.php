@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     </tr>
 
     <tr>
-        <td><span>Current Stock Quantity</span><input type="text" name="cstock" value="<?php echo $row['close_stock'];  ?>" readonly required><input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" readonly required><input type="hidden" name="likes" value="<?php echo $row['likes']; ?>" readonly required></td>
+        <td><span>Current Stock Quantity</span><input type="text" name="cstock" value="<?php echo $row['close_stock'];  ?>" readonly required><input type="hidden" name="img" value="<?php echo $row['item_img']; ?>" readonly required><input type="hidden" name="likes" value="<?php echo $row['likes']; ?>" readonly required><input type="hidden" name="itm_id" value="<?php echo $row['item_id']; ?>" readonly required></td>
     </tr>
 </table>
 

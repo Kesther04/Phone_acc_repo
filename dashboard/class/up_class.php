@@ -51,6 +51,14 @@ class  UPD
 
         return $update;
     }
+
+    public function upd_feat_tab($nid,$id){
+        require("d_con/database_connection.php");
+
+        $update = $con->query("UPDATE feature_table SET item_id='$nid' WHERE item_id ='$id' ");
+
+        return $update;
+    }
 }
 
 

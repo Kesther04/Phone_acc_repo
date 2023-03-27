@@ -245,6 +245,14 @@ class  SEL
 
         return $select;
     }
+
+    public function sel_lim_item(){
+        require("d_con/database_connection.php");
+
+        $select = $con->query(" SELECT * FROM item_table ORDER BY(id)DESC LIMIT 1  ");
+
+        return $select;
+    }
     
     public function sel_all_tot_itm($id){
         require("d_con/database_connection.php");
