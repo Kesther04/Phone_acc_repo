@@ -63,7 +63,7 @@
         <div class="dash-b">
             <a href="../view_prod/product_table.php">
                 <span>
-                <img src="../../../img/user-fill.svg"  class="fir-img"><img src="../../../img/user.svg" class="sec-img" >
+                <img src="../../../img/vp-fill.svg"  class="fir-img"><img src="../../../img/vp.svg" class="sec-img" >
                 VIEW PRODUCT
                 </span>
             </a>
