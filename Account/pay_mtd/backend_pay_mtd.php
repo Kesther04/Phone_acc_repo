@@ -7,8 +7,27 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $sess = $_SESSION['USER'];
     $stat = 'PENDING';
     $leav_date = '';
-    $ddant  = date('d')+5;
-    $arr_date = date("$ddant/m/y");
+    $ddant = date('d')+5;
+    $mdant = date("m");
+    $ydant = date("y");
+    if ($mdant=="04" AND $mdant=="06" AND $mdant=="09" AND $mdant=="11" AND $ddant >= 30) {
+        $ndant = $ddant-30;
+        $nmd = $mdant+01;
+        $arr_date = date("$ndant/$nmd/y");
+    }
+    elseif ($mdant !=="04" AND $mdant !=="06" AND $mdant !=="09" AND $mdant !=="11" AND $ddant >=31) {
+        $ndant = $ddant-31;
+        $nmd = $mdant+01;
+        $arr_date = date("$ndant/$nmd/y");
+    }
+    elseif ($mdant=="12" AND $ddant >=31) {
+        $ndant = $ddant-31;
+        $nmd = $mdant-$mdant;
+        $arr_date = date("$ndant/$nmd/y");
+    }else{
+        $arr_date = date("$ddant/m/y");
+    }
+    
     $deliv_time = '';
     $date = date("d/m/y");
     $hour = date("h")+1;
