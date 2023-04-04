@@ -32,7 +32,7 @@
       while ($row = $sel_con->fetch_assoc()) {
         $avn =  str_replace('_',' ',$row['item_group']);
   ?>
-        <div><a href="Accesories/<?php echo $row['item_group'];  ?>"><?php echo $avn; ?></a></div>
+        <a href="Accesories/<?php echo $row['item_group'];  ?>"><div><?php echo $avn; ?></div></a>
 
   <?php  } } ?>
   

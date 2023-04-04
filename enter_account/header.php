@@ -40,7 +40,7 @@
     </div>
     <?php } } ?>
     <div><img src="../img/heart.png"></div>
-    <div><button><a href="login.php">Login</a></button></div>
+    <div><a href="login.php"><button>Login</button></a></div>
   </div>
   </div>
 </header>

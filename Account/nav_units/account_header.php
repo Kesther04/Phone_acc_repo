@@ -46,7 +46,7 @@
     </div>
     <?php } } ?>
     <div><img src="../../img/heart.png"></div>
-    <div><button><a href="../dashboard/dashboard.php">My account</a></button></div>
+    <div><a href="../dashboard/dashboard.php"><button>My account</button></a></div>
   </div>
   </div>
 </header>

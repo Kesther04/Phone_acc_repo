@@ -405,7 +405,7 @@
     }
 
 
-    .first-sec-div div{
+    .first-sec-div a{
         border-radius: 20px;
         border:1px solid black;
         width:40%;
@@ -931,7 +931,7 @@
     }
 
 
-    .first-sec-div div{
+    .first-sec-div a{
         border-radius: 20px;
         border:1px solid black;
         width:90%;
