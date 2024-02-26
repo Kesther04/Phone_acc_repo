@@ -11,7 +11,7 @@
     <script src="../../js/ajax.js"></script>
     <?php        
       $pageName = dirname($_SERVER['PHP_SELF']);   
-      $group = str_replace('/Github/Phone_acc_repo/Accesories/','',$pageName);
+      $group = basename($pageName);
       $din = str_replace('_',' ',$group);
     ?>
     <title><?php echo $din; ?></title>

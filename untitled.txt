@@ -1,3 +1,0 @@
-setInterval(
-    $('.cart').load('cartpage.php'),200
-)

@@ -27,20 +27,6 @@ body{
 }
 
 
-@keyframes nav-load{
-    0%{
-        transform: scale(0);
-    }
-
-    90%{
-        transform: scale(1.1);
-    }
-
-    100%{
-        transform: scale(1);
-    }
-}
-
 .msg-log{
     width:100%;
     color:red;
@@ -126,7 +112,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    animation:nav-load var(--nav-load-time) ease-in ;
 }
 
 .form-sec h1{
@@ -187,6 +173,21 @@ body{
     outline:none;
 }
 
+
+
+@keyframes nav-load{
+    0%{
+        transform: scale(0);
+    }
+
+    90%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
 
 #p-pass{
     visibility: visible;
